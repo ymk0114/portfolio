@@ -1,0 +1,480 @@
+@charset "utf-8";
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  /*デフォルトの文字色、font-familyを予め当てておく*/
+  color: #c67039;
+  /* font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", */
+  /* "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; */
+  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+    "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+    "ＭＳ 明朝", serif;
+  font-feature-settings: "palt";
+}
+
+a {
+  /*下線を消す*/
+  text-decoration: none;
+  /*色を消す*/
+  color: inherit;
+}
+
+ul {
+  /*左の「・」を消す*/
+  list-style: none;
+}
+
+img {
+  /* max-width: 100%; */
+  vertical-align: bottom;
+  border: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-height: 895px;
+  margin: 0;
+  padding: 0;
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-repeat: repeat-x;
+}
+
+.scroll_section {
+  width: 100vw;
+  height: 100%;
+}
+
+header {
+  display: flex;
+}
+
+.portfolio_top {
+  position: relative;
+}
+
+.portfolio_title {
+  position: absolute;
+  top: 100px;
+  left: 77px;
+}
+
+.portfolio_title01 {
+  font-size: 45px;
+  font-family: "zen-kaku-gothic-new", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0 0 37px;
+  letter-spacing: 0.1em;
+}
+
+.portfolio_title02 {
+  font-size: 20px;
+  font-family: "zen-kaku-gothic-new", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin-left: 6px;
+  letter-spacing: 0.38em;
+}
+
+.portforio_lead-ja {
+  position: absolute;
+  top: 276px;
+  left: 150px;
+  line-height: 1.5;
+  font-size: 45px;
+  font-family: "a-otf-ryumin-pr6n", serif;
+  font-weight: 300;
+  font-style: normal;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+
+.portfolio_lead_en {
+  position: absolute;
+  top: 750px;
+  left: 75px;
+}
+
+.top_img {
+  position: absolute;
+  top: 125px;
+  left: 384px;
+  width: 100%;
+}
+
+.header_wrap {
+  position: fixed;
+  /* position: absolute; */
+  top: 90px;
+  /* left: 1224px; */
+  text-align: right;
+  /* position: fixed; */
+  width: 100%;
+  /* top: 82px; */
+  /* left: 0; */
+  /* top: 0; */
+  z-index: 10000;
+}
+
+.nav_list_text {
+  font-size: 20px;
+  font-family: "zen-kaku-gothic-new", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 0.8;
+  /* margin-bottom: 17px; */
+}
+.nav_list_text + .nav_list_text {
+  margin-top: 17px;
+}
+
+.nav_icon {
+  margin-top: 170px;
+}
+
+.top_scroll {
+  position: absolute;
+  top: 790px;
+  left: 1135px;
+  font-size: 20px;
+  font-family: "zen-kaku-gothic-new", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.top_scroll::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 107px;
+  width: 200px;
+  height: 3px;
+  background-color: #c67039;
+}
+
+.service_contents {
+  position: relative;
+}
+
+.service_img {
+  position: absolute;
+  top: 0;
+  right: 167px;
+  width: 100%;
+  height: 100vh;
+}
+
+.portfolio_menu {
+  position: absolute;
+  left: 252px;
+}
+
+.menu_title {
+  position: absolute;
+  top: 160px;
+  font-size: 60px;
+  font-family: "a-otf-ryumin-pr6n", serif;
+  font-weight: 300;
+  font-style: normal;
+  padding-left: 20px;
+  display: flex;
+  /* color: #ffffff; */
+}
+
+.menu_title::before {
+  position: absolute;
+  left: -100px;
+  content: "";
+  width: 78px;
+  height: 1px;
+  background-color: #56402b;
+  align-self: center;
+}
+
+.menu_subtitle {
+  position: absolute;
+  top: 257px;
+  font-size: 25px;
+  font-family: "a-otf-ryumin-pr6n", serif;
+  font-weight: 300;
+  font-style: normal;
+  padding-left: 25px;
+}
+
+.card {
+  display: flex;
+  width: 1310px;
+  height: 200px;
+  padding-top: 75px;
+}
+
+.card-img {
+  position: absolute;
+  left: 608px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_wrapper {
+  position: absolute;
+  left: 798px;
+  align-content: space-around;
+  margin-left: 52px;
+}
+
+.card_box {
+  display: flex;
+  align-items: flex-end;
+  margin: 10px 0 40px;
+}
+
+.card-title {
+  font-size: 30px;
+  margin-right: 25px;
+}
+
+.card-app {
+  font-size: 18px;
+}
+
+.card-text {
+  font-size: 18px;
+  line-height: 2;
+}
+
+.works_contents {
+  position: relative;
+  display: flex;
+  height: 100vh;
+}
+
+.works_img {
+  position: absolute;
+  bottom: 0;
+}
+
+.works_contents .portfolio_menu {
+  position: absolute;
+  left: 485px;
+}
+
+.works_container {
+  position: absolute;
+  left: 677px;
+}
+
+.works_list {
+  position: relative;
+}
+
+.works_circle {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.works_btn {
+  position: absolute;
+  top: 77%;
+  left: 39%;
+  font-size: 22px;
+  font-family: "a-otf-ryumin-pr6n", serif;
+  font-weight: 300;
+  font-style: normal;
+  width: 203px;
+  height: 65px;
+  border-radius: 32px;
+  background: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about_contents {
+  position: relative;
+  display: flex;
+  height: 100vh;
+}
+
+.about_img01 {
+  position: absolute;
+  bottom: 0px;
+  left: 94px;
+}
+
+.about_img02 {
+  position: absolute;
+  top: 0;
+  left: 567px;
+}
+
+.about_contents .portfolio_menu {
+  position: absolute;
+  left: 690px;
+  z-index: 100;
+}
+
+.about_portrait {
+  position: absolute;
+  top: 140px;
+  left: 775px;
+}
+
+.profile_box {
+  position: absolute;
+  top: 225px;
+  left: 1458px;
+  color: #56402b;
+  z-index: 200;
+}
+
+.name {
+  display: flex;
+  align-items: flex-end;
+  font-family: "a-otf-ryumin-pr6n", serif;
+  font-weight: 300;
+  font-style: normal;
+  margin-bottom: 65px;
+}
+
+.name01 {
+  font-size: 35px;
+  padding-right: 12px;
+}
+
+.name02 {
+  font-size: 23px;
+}
+
+.profile_text {
+  font-size: 14px;
+  line-height: 1.78;
+}
+
+.contact_img {
+  width: 100vw;
+  height: 100vh;
+}
+
+.contact_contents {
+  position: relative;
+  height: 895px;
+}
+
+.contact_img {
+  position: absolute;
+  left: 255px;
+  height: 895px;
+}
+
+.contact_contents .portfolio_menu {
+  position: absolute;
+  left: 1124px;
+}
+
+.contact_contents .portfolio_menu .menu_text {
+  position: absolute;
+  top: 353px;
+  font-size: 16px;
+  color: #56402b;
+  line-height: 2.25;
+}
+
+.customer-info {
+  position: absolute;
+  top: 118px;
+  left: 1588px;
+  font-size: 16px;
+  color: #56402b;
+  width: 640px;
+}
+
+.customer_info-form + .customer_info-form {
+  margin-top: 35px;
+}
+
+.customer_name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.customer_name01 {
+  width: 285px;
+  height: 60px;
+  background: yellow;
+}
+
+.form-box {
+  width: 640px;
+  height: 60px;
+  background: yellow;
+  margin-top: 17px;
+}
+
+.form-box_contents {
+  width: 640px;
+  height: 202px;
+  background: yellow;
+  margin-top: 17px;
+}
+
+.customer-info_form_btn {
+  width: 203px;
+  height: 56px;
+  border-radius: 28px;
+  background: #c67039;
+  color: #ffffff;
+  font-family: "a-otf-ryumin-pr6n", serif;
+  font-weight: 300;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 47px auto 0;
+}
+
+footer {
+  position: relative;
+  height: 100vh;
+}
+
+.footer_img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.copyright {
+  position: absolute;
+  left: 912px;
+  bottom: 25px;
+  font-size: 15px;
+  font-family: "zen-kaku-gothic-new", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #56402b;
+}
