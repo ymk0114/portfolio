@@ -4,82 +4,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
     <title>okazaki yumiko_portfolio</title>
+    <!-- 横スクロールのJavaScriptライブラリ「Locomotive Scroll」のCSSのCDN -->
     <link href="
     https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
     " rel="stylesheet">
+    <!-- swiperのCDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <main data-scroll-container class="scroll_container">
-        <section data-scroll-section class="scroll_section">
-            <header class="portfolio_top">
-                <picture class="portfolio_tree">
-                    <img src="./images/pc_top_tree-100.png" alt="tree">
-                </picture>
-                <div class="portfolio_title">
-                    <h1 class="portfolio_title01">
-                        OKAZAKI YUMIKO
-                    </h1>
-                    <h2 class="portfolio_title02">
-                        PORTFOLIO SITE
-                    </h2>
-                </div>
-                <div class="portfolio_lead">
-                    <div class="portforio_lead-ja">
-                        いろんな人の想いが、<br>調和したデザイン。
+    <main data-scroll-container class="scroll_container" id="scroll_container">
+        <section data-scroll-section class="scroll_section top">
+            <header id="portfolio_top">
+                <div class="portfolio_top01">
+                    <picture class="portfolio_tree">
+                        <img src="./images/pc_top_tree-100.png" alt="tree">
+                    </picture>
+                    <div class="portfolio_title">
+                        <h1 class="portfolio_title01">
+                            OKAZAKI YUMIKO
+                        </h1>
+                        <h2 class="portfolio_title02">
+                            PORTFOLIO SITE
+                        </h2>
                     </div>
-                    <div class="portfolio_lead_en">
-                        A design that harmonizes the ideas of many people
-                    </div>
-                </div>
-                <picture class="top_img">
-                    <img src="./images/pc_top-100.png" alt="top_photo">
-                </picture>
-                <div class="header_wrap">
-                    <ul class="nav_list">
-                        <li class="nav_list_text">
-                            <a href="#home">
-                                home
-                            </a>
-                        </li>
-                        <li class="nav_list_text">
-                            <a href="#service">
-                                service
-                            </a>
-                        </li>
-                        <li class="nav_list_text">
-                            <a href="#works">
-                                works
-                            </a>
-                        </li>
-                        <li class="nav_list_text">
-                            <a href="#about">
-                                about
-                            </a>
-                        </li>
-                        <li class="nav_list_text">
-                            <a href="#contact">
-                                contact
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="nav_icon">
-                        <img src="./images/instagram-100.jpg" alt="instagram">
+                    <div class="portfolio_lead">
+                        <div class="portfolio_lead-ja">
+                            いろんな人の想いが、<br>調和したデザイン。
+                        </div>
+                        <div class="portfolio_lead_en">
+                            A design that harmonizes the ideas of many people
+                        </div>
                     </div>
                 </div>
-                <div class="top_scroll">
-                    scroll
+                <div class="portfolio_top02">
+                    <picture class="top_img">
+                        <img src="./images/pc_top-100.png" alt="top_photo">
+                    </picture>
+                </div>
+                <div class="portfolio_top03">
+                    <div class="header_wrap" data-scroll data-scroll-sticky data-scroll-target="#scroll_container">
+                        <ul class="nav_list">
+                            <li class="nav_list_text">
+                                <a href="#portfolio_top">
+                                    home
+                                </a>
+                            </li>
+                            <li class="nav_list_text">
+                                <a href="#service_contents">
+                                    service
+                                </a>
+                            </li>
+                            <li class="nav_list_text">
+                                <a href="#works_contents">
+                                    works
+                                </a>
+                            </li>
+                            <li class="nav_list_text">
+                                <a href="#about_contents">
+                                    about
+                                </a>
+                            </li>
+                            <li class="nav_list_text">
+                                <a href="#contact_contents">
+                                    contact
+                                </a>
+                            </li>
+                            <li class="nav_icon">
+                                <img src="./images/instagram-100.png" alt="instagram">
+                            </li>
+                        </ul>
+                        <!-- <div class="nav_icon">
+                            <img src="./images/instagram-100.png" alt="instagram">
+                        </div> -->
+                    </div>
+                    <div class="top_scroll">
+                        <span class="mgr-10">scroll</span>down
+                    </div>
                 </div>
             </header>
         </section>
 
-        <section data-scroll-section class="scroll_section">
-            <div class="service_contents">
+        <section data-scroll-section class="scroll_section service">
+            <div id="service_contents">
                 <picture class="service_img">
-                    <img src="./images/pc_service-100.png" alt="service_photo">
+                    <img class="pc_service_img" src="./images/pc_service-100.png" alt="service_photo">
                 </picture>
+                <!-- <div class="gradation">
+                </div> -->
                 <div class="portfolio_menu">
                     <div class="menu_title">
                         service
@@ -88,76 +102,78 @@
                         できること
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-img">
-                        <picture>
-                            <img src="./images/pc_service_design-100.png" alt="design">
-                        </picture>
-                    </div>
-                    <div class="card_wrapper">
-                        <div class="card_box">
-                            <div class="card-title">
-                                デザイン
-                            </div>
-                            <div class="card-app">
-                                Adobe Illustrator / Photoshop
-                            </div>
+                <div class="service_card">
+                    <div class="card">
+                        <div class="card-img">
+                            <picture>
+                                <img src="./images/pc_service_design-100.png" alt="design">
+                            </picture>
                         </div>
-                        <p class="card-text">
-                            バナーやコーポレートサイト、LP等を作成<br>
-                            いたします。お客様の課題や想いを丁寧に<br>
-                            ヒアリングし、デザインを通して表現いたします。
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <picture>
-                            <img src="./images/pc_service_coding-100.png" alt="coding">
-                        </picture>
-                    </div>
-                    <div class="card_wrapper">
-                        <div class="card_box">
-                            <div class="card-title">
-                                コーディング
+                        <div class="card_wrapper">
+                            <div class="card_box">
+                                <div class="card-title">
+                                    デザイン
+                                </div>
+                                <div class="card-app">
+                                    Adobe Illustrator / Photoshop
+                                </div>
                             </div>
-                            <div class="card-app">
-                                HTML / CSS / jQuery
-                            </div>
+                            <p class="card-text">
+                                バナーやコーポレートサイト、LP等を作成<br>
+                                いたします。お客様の課題や想いを丁寧に<br>
+                                ヒアリングし、デザインを通して表現いたします。
+                            </p>
                         </div>
-                        <p class="card-text">
-                            PCやタブレット、スマートフォンにも対応した<br>
-                            サイトを作成いたします。<br>
-                            jQueryで簡単な動きをつけることも可能です。
-                        </p>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <picture>
-                            <img src="./images/pc_service_commnication-100.png" alt="commnication">
-                        </picture>
-                    </div>
-                    <div class="card_wrapper">
-                        <div class="card_box">
-                            <div class="card-title">
-                                コミュニケーション
-                            </div>
-                            <div class="card-app">
-                                Chatwork / Slack
-                            </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <picture>
+                                <img src="./images/pc_service_coding-100.png" alt="coding">
+                            </picture>
                         </div>
-                        <p class="card-text">
-                            デザイン・コーディングなど、お気軽にご相談ください。<br>
-                            通常3日以内に返信させていただきます。<br>
-                        </p>
+                        <div class="card_wrapper">
+                            <div class="card_box">
+                                <div class="card-title">
+                                    コーディング
+                                </div>
+                                <div class="card-app">
+                                    HTML / CSS / jQuery
+                                </div>
+                            </div>
+                            <p class="card-text">
+                                PCやタブレット、スマートフォンにも対応した<br>
+                                サイトを作成いたします。<br>
+                                jQueryで簡単な動きをつけることも可能です。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <picture>
+                                <img src="./images/pc_service_commnication-100.png" alt="commnication">
+                            </picture>
+                        </div>
+                        <div class="card_wrapper">
+                            <div class="card_box">
+                                <div class="card-title">
+                                    コミュニケーション
+                                </div>
+                                <div class="card-app">
+                                    Chatwork / Slack
+                                </div>
+                            </div>
+                            <p class="card-text">
+                                デザイン・コーディングなど、お気軽にご相談ください。<br>
+                                通常3日以内に返信させていただきます。<br>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section data-scroll-section class="scroll_section">
-            <div class="works_contents">
+        <section data-scroll-section class="scroll_section works">
+            <div id="works_contents">
                 <picture class="works_img">
                     <img src="./images/pc_works-100.png" alt="works_photo">
                 </picture>
@@ -171,45 +187,79 @@
                 </div>
                 <div class="works_container">
                     <div class="works_list">
-                        <picture class="works_circle">
-                            <img src="./images/works_circle-100.png" alt="works_list">
-                        </picture>
-                        <div class="works_btn">
-                            view more...
+                        <div class="works_circle">
+                            <img class="works_circle-img" src="./images/works_circle-100.png" alt="works_list">
+                            <!-- <div class="works_slider">
+                                <div class="works_slider-img">
+                                    <img src="./images/works01.jpg" alt="works01">
+                                </div>
+                                <div class="works_slider-img">
+                                    <img src="./images/works02.jpg" alt="works02">
+                                </div>
+                                <div class="works_slider-img">
+                                    <img src="./images/works03.jpg" alt="works03">
+                                </div>
+                                <div class="works_slider-img">
+                                    <img src="./images/works04.jpg" alt="works04">
+                                </div>
+                                <div class="works_slider-img">
+                                    <img src="./images/works05.jpg" alt="works05">
+                                </div>
+                                <div class="works_slider-img">
+                                    <img src="./images/works06.jpg" alt="works06">
+                                </div>
+                                <div class="works_slider-img">
+                                    <img src="./images/works07.jpg" alt="works07">
+                                </div>
+                                <div class="works_slider-img">
+                                    <img src="./images/works08.jpg" alt="works08">
+                                </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div> -->
+
+
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slid">
+                                        <img src="./images/works01.jpg" alt="works01">
+                                    </div>
+                                    <div class="swiper-slid">
+                                        <img src="./images/works02.jpg" alt="works02">
+                                    </div>
+                                    <div class="swiper-slid">
+                                        <img src="./images/works03.jpg" alt="works03">
+                                    </div>
+                                    <!-- <div class="swiper-slid">
+                                        <img src="./images/works04.jpg" alt="works04">
+                                    </div>
+                                    <div class="swiper-slid">
+                                        <img src="./images/works05.jpg" alt="works05">
+                                    </div>
+                                    <div class="swiper-slid">
+                                        <img src="./images/works06.jpg" alt="works06">
+                                    </div>
+                                    <div class="swiper-slid">
+                                        <img src="./images/works07.jpg" alt="works07">
+                                    </div>
+                                    <div class="swiper-slid">
+                                        <img src="./images/works08.jpg" alt="works08">
+                                    </div> -->
+                                </div>
+                                <!-- <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div> -->
+                            </div>
+                            <div class="works_btn">
+                                view more...
+                            </div>
                         </div>
                     </div>
-                    <!-- <div class="works_slider">
-                        <div class="works_img">
-                            <img src="./images/works01.jpg" alt="works01">
-                        </div>
-                        <div class="works_img">
-                            <img src="./images/works02.jpg" alt="works02">
-                        </div>
-                        <div class="works_img">
-                            <img src="./images/works03.jpg" alt="works03">
-                        </div>
-                        <div class="works_img">
-                            <img src="./images/works04.jpg" alt="works04">
-                        </div>
-                        <div class="works_img">
-                            <img src="./images/works05.jpg" alt="works05">
-                        </div>
-                        <div class="works_img">
-                            <img src="./images/works06.jpg" alt="works06">
-                        </div>
-                        <div class="works_img">
-                            <img src="./images/works07.jpg" alt="works07">
-                        </div>
-                        <div class="works_img">
-                            <img src="./images/works08.jpg" alt="works08">
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </section>
 
-        <section data-scroll-section class="scroll_section">
-            <div class="about_contents">
+        <section data-scroll-section class="scroll_section about">
+            <div id="about_contents">
                 <picture class="about_img01">
                     <img src="./images/pc_about-100.png" alt="tree">
                 </picture>
@@ -258,11 +308,9 @@
             </div>
         </section>
 
-        <section data-scroll-section class="scroll_section">
-            <div class="contact_contents">
-                <picture class="contact_img">
-                    <img src="./images/pc_contact-100.png" alt="contact_photo">
-                </picture>
+        <section data-scroll-section class="scroll_section contact">
+            <div id="contact_contents">
+                <img class="contact_img" src="./images/pc_contact-100.png" alt="contact_photo">
                 <div class="portfolio_menu">
                     <div class="menu_title">
                         contact
@@ -314,7 +362,7 @@
 
         </section>
 
-        <section data-scroll-section class="scroll_section">
+        <section data-scroll-section class="scroll_section bottom">
             <footer>
                 <picture class="footer_img">
                     <img src="./images/pc_footer-100.png" alt="tree">
@@ -339,6 +387,43 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                 })
             })
         })()
+
+        // $('.works_slider').slick({
+        //     // autoplay: true,
+        //     autoplaySpeed: 2000,
+        //     // dots: true,
+        //     arrows: true,
+        //     slidesToShow: 3,
+        //     slidesToScroll: 1,
+        //     responsive: [
+        //         {
+        //             breakpoint: 767,
+        //             settings: {
+        //                 slidesToShow: 1,
+
+        //             }
+        //         }
+        //     ]
+        // });
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper(".swiper", {});
+        // const swiper = new Swiper(".swiper", {
+        //     speed: 600, // スライドの切り替えスピード
+        //     loop: true, // ループさせる
+        //     slidesPerView: 1.8, // スライドを複数枚表示する
+        //     centeredSlides: true,  // スライドを中央寄せにする
+        //     spaceBetween: 20, // スライド間の余白
+
+        //     navigation: {
+        //         nextEl: ".swiper-button-next",
+        //         prevEl: ".swiper-button-prev",
+        //     },
+        // });
     </script>
 </body>
 
