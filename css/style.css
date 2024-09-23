@@ -193,7 +193,7 @@ header {
   justify-content: flex-start;
 }
 
-.mgr-10 {
+.mgr-20 {
   margin-right: 20px;
 }
 
@@ -357,6 +357,16 @@ header {
   height: 65px;
   border-radius: 32px;
   background: white;
+  color: #56402b;
+}
+
+.works_btn::after {
+  content: "";
+  width: 15px; /* くの字を山なりに見た時、左側の長さ */
+  height: 15px; /* くの字を山なりに見た時、右側の長さ */
+  border-top: 1.5px solid #56402b; /* くの字を山なりに見た時、左側の太さと色 */
+  border-right: 1.5px solid #56402b; /* くの字を山なりに見た時、右側の太さと色 */
+  transform: rotate(45deg); /* くの字の向き */
 }
 
 .swiper-slide {
