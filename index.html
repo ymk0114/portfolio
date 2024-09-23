@@ -189,65 +189,36 @@
                     <div class="works_list">
                         <div class="works_circle">
                             <img class="works_circle-img" src="./images/works_circle-100.png" alt="works_list">
-                            <!-- <div class="works_slider">
-                                <div class="works_slider-img">
-                                    <img src="./images/works01.jpg" alt="works01">
-                                </div>
-                                <div class="works_slider-img">
-                                    <img src="./images/works02.jpg" alt="works02">
-                                </div>
-                                <div class="works_slider-img">
-                                    <img src="./images/works03.jpg" alt="works03">
-                                </div>
-                                <div class="works_slider-img">
-                                    <img src="./images/works04.jpg" alt="works04">
-                                </div>
-                                <div class="works_slider-img">
-                                    <img src="./images/works05.jpg" alt="works05">
-                                </div>
-                                <div class="works_slider-img">
-                                    <img src="./images/works06.jpg" alt="works06">
-                                </div>
-                                <div class="works_slider-img">
-                                    <img src="./images/works07.jpg" alt="works07">
-                                </div>
-                                <div class="works_slider-img">
-                                    <img src="./images/works08.jpg" alt="works08">
-                                </div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
-                            </div> -->
-
 
                             <div class="swiper">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slid">
+                                    <div class="swiper-slide">
                                         <img src="./images/works01.jpg" alt="works01">
                                     </div>
-                                    <div class="swiper-slid">
+                                    <div class="swiper-slide">
                                         <img src="./images/works02.jpg" alt="works02">
                                     </div>
-                                    <div class="swiper-slid">
+                                    <div class="swiper-slide">
                                         <img src="./images/works03.jpg" alt="works03">
                                     </div>
-                                    <!-- <div class="swiper-slid">
+                                    <div class="swiper-slide">
                                         <img src="./images/works04.jpg" alt="works04">
                                     </div>
-                                    <div class="swiper-slid">
+                                    <div class="swiper-slide">
                                         <img src="./images/works05.jpg" alt="works05">
                                     </div>
-                                    <div class="swiper-slid">
+                                    <div class="swiper-slide">
                                         <img src="./images/works06.jpg" alt="works06">
                                     </div>
-                                    <div class="swiper-slid">
+                                    <div class="swiper-slide">
                                         <img src="./images/works07.jpg" alt="works07">
                                     </div>
-                                    <div class="swiper-slid">
+                                    <div class="swiper-slide">
                                         <img src="./images/works08.jpg" alt="works08">
-                                    </div> -->
+                                    </div>
                                 </div>
-                                <!-- <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div> -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
                             </div>
                             <div class="works_btn">
                                 view more...
@@ -388,42 +359,21 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
             })
         })()
 
-        // $('.works_slider').slick({
-        //     // autoplay: true,
-        //     autoplaySpeed: 2000,
-        //     // dots: true,
-        //     arrows: true,
-        //     slidesToShow: 3,
-        //     slidesToScroll: 1,
-        //     responsive: [
-        //         {
-        //             breakpoint: 767,
-        //             settings: {
-        //                 slidesToShow: 1,
-
-        //             }
-        //         }
-        //     ]
-        // });
-
-
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <script>
-        const swiper = new Swiper(".swiper", {});
-        // const swiper = new Swiper(".swiper", {
-        //     speed: 600, // スライドの切り替えスピード
-        //     loop: true, // ループさせる
-        //     slidesPerView: 1.8, // スライドを複数枚表示する
-        //     centeredSlides: true,  // スライドを中央寄せにする
-        //     spaceBetween: 20, // スライド間の余白
+        const swiper = new Swiper(".swiper", {
+            speed: 600, // スライドの切り替えスピード
+            loop: true, // ループさせる
+            slidesPerView: 1.8, // スライドを複数枚表示する
+            centeredSlides: true,  // スライドを中央寄せにする
+            spaceBetween: 20, // スライド間の余白
 
-        //     navigation: {
-        //         nextEl: ".swiper-button-next",
-        //         prevEl: ".swiper-button-prev",
-        //     },
-        // });
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
     </script>
 </body>
 
