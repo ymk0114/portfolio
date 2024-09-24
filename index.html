@@ -15,6 +15,44 @@
 </head>
 
 <body>
+    <div class="portfolio_top03" data-scroll data-scroll-sticky data-scroll-target="#scroll_container">
+        <div class="header_wrap">
+            <ul class="nav_list">
+                <li class="nav_list_text">
+                    <a href="#portfolio_top">
+                        home
+                    </a>
+                </li>
+                <li class="nav_list_text">
+                    <a href="#service_contents">
+                        service
+                    </a>
+                </li>
+                <li class="nav_list_text">
+                    <a href="#works_contents">
+                        works
+                    </a>
+                </li>
+                <li class="nav_list_text">
+                    <a href="#about_contents">
+                        about
+                    </a>
+                </li>
+                <li class="nav_list_text">
+                    <a href="#contact_contents">
+                        contact
+                    </a>
+                </li>
+                <li class="nav_icon">
+                    <img src="./images/instagram-100.png" alt="instagram">
+                </li>
+            </ul>
+            <div class="top_scroll">
+                <span class="mgr-20">scroll</span>down
+            </div>
+        </div>
+
+    </div>
     <main data-scroll-container class="scroll_container" id="scroll_container">
         <section data-scroll-section class="scroll_section top">
             <header id="portfolio_top">
@@ -44,43 +82,7 @@
                         <img src="./images/pc_top-100.png" alt="top_photo">
                     </picture>
                 </div>
-                <div class="portfolio_top03">
-                    <div class="header_wrap" data-scroll data-scroll-sticky data-scroll-target="#scroll_container">
-                        <ul class="nav_list">
-                            <li class="nav_list_text">
-                                <a href="#portfolio_top">
-                                    home
-                                </a>
-                            </li>
-                            <li class="nav_list_text">
-                                <a href="#service_contents">
-                                    service
-                                </a>
-                            </li>
-                            <li class="nav_list_text">
-                                <a href="#works_contents">
-                                    works
-                                </a>
-                            </li>
-                            <li class="nav_list_text">
-                                <a href="#about_contents">
-                                    about
-                                </a>
-                            </li>
-                            <li class="nav_list_text">
-                                <a href="#contact_contents">
-                                    contact
-                                </a>
-                            </li>
-                            <li class="nav_icon">
-                                <img src="./images/instagram-100.png" alt="instagram">
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="top_scroll">
-                        <span class="mgr-20">scroll</span>down
-                    </div>
-                </div>
+
             </header>
         </section>
 
@@ -102,6 +104,7 @@
                 <div class="service_card">
                     <div class="card">
                         <div class="card-img">
+                            <div></div>
                             <picture>
                                 <img src="./images/pc_service_design-100.png" alt="design">
                             </picture>
@@ -124,6 +127,7 @@
                     </div>
                     <div class="card">
                         <div class="card-img">
+                            <div></div>
                             <picture>
                                 <img src="./images/pc_service_coding-100.png" alt="coding">
                             </picture>
@@ -146,6 +150,7 @@
                     </div>
                     <div class="card">
                         <div class="card-img">
+                            <div></div>
                             <picture>
                                 <img src="./images/pc_service_commnication-100.png" alt="commnication">
                             </picture>
@@ -348,10 +353,22 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
     <script>
         (() => {
             document.addEventListener('DOMContentLoaded', () => {
-                new LocomotiveScroll({
+                const scroll = new LocomotiveScroll({
                     el: document.querySelector('[data-scroll-container]'),
                     direction: 'horizontal',
                     smooth: true,
+                })
+                const links = document.querySelectorAll('.nav_list a')
+                links.forEach((link) => {
+                    const href = link.getAttribute('href')
+                    const target = document.querySelector(href)
+                    console.log(href)
+                    console.log(target)
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault()
+                        e.stopPropagation()
+                        scroll.scrollTo(target)
+                    })
                 })
             })
         })()
