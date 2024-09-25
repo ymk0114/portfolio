@@ -170,7 +170,7 @@ header {
   position: absolute;
   top: 0;
   right: 0;
-  padding-right: 200px;
+  padding-right: 72px;
   text-align: right;
 }
 
@@ -191,17 +191,17 @@ header {
 }
 
 .top_scroll {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  position: fixed;
+  top: 89%;
+  left: 83%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   font-size: 20px;
   font-family: "zen-kaku-gothic-new", sans-serif;
   font-weight: 700;
   font-style: normal;
-  margin-top: 240px;
-  justify-content: flex-start;
+  /* padding-bottom: 67px;
+  margin-left: -67px; */
 }
 
 .mgr-20 {
@@ -210,21 +210,28 @@ header {
 
 .top_scroll::after {
   content: "";
-  width: 350px;
+  width: 200px;
   height: 3px;
   background-color: #c67039;
   margin-left: 35px;
 }
 
 #service_contents {
+  position: relative;
   height: 100%;
   display: flex;
 }
 
+#service_contents .portfolio_menu .menu_title {
+  color: #ffffff;
+}
+
 .service_img {
+  position: absolute;
   display: inline-block;
   height: 100%;
-  margin-left: -137px;
+  /* margin-left: -137px; */
+  z-index: -1;
 }
 
 .pc_service_img {
@@ -232,15 +239,23 @@ header {
 }
 
 .gradation {
-  width: 1270px;
+  position: absolute;
+  z-index: -2;
+  width: 100%;
   height: 100%;
-  background: linear-gradient(to right, white 25%, #dbcb7b 50%, white);
-  opacity: 0.3;
-  margin-left: -746px;
+  background: linear-gradient(
+    to right,
+    #ffffff00,
+    #dbcb7b 45%,
+    #dbcb7b 70%,
+    #ffffff00
+  );
+  opacity: 0.9;
+  filter: blur(30px);
 }
 
 #service_contents .portfolio_menu {
-  margin-left: -51%;
+  margin-left: 17%;
 }
 
 .menu_title {
@@ -275,14 +290,16 @@ header {
 .service_card {
   width: 100%;
   margin: auto 0;
+  z-index: 100;
 }
 
 .card {
   display: flex;
   width: 100%;
   /* height: 100%; */
-  margin-left: 7%;
+  margin-left: 9%;
   align-items: flex-start;
+  color: #ffffff;
 }
 
 .card + .card {
@@ -293,7 +310,8 @@ header {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  background: yellow;
+  background: #ffffff;
+  filter: blur(5px);
 }
 
 .card-img {
@@ -330,6 +348,7 @@ header {
 .card-text {
   font-size: 18px;
   line-height: 2;
+  color: #ffffff;
 }
 
 #works_contents {
@@ -405,19 +424,25 @@ header {
   color: #56402b;
 }
 
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .swiper {
   position: absolute;
-  top: 25%;
-  left: -10%;
-  width: 742px;
-  height: 300px;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  /* height: 300px; */
+  transform: translate(-50%, -50%);
   display: table-cell; /*上下中央*/
   text-align: center; /*左右中央*/
   vertical-align: middle; /*上下中央*/
 }
 
 .swiper-slide img {
-  height: 300px;
+  height: auto;
   width: 100%;
   object-fit: contain;
   margin: 0 auto;
