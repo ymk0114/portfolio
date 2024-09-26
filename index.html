@@ -91,7 +91,7 @@
                 <picture class="service_img">
                     <img class="pc_service_img" src="./images/pc_service-100.png" alt="service_photo">
                 </picture>
-                <div class="gradation">
+                <div class="service_gradation">
                 </div>
                 <div class="portfolio_menu">
                     <div class="menu_title">
@@ -283,7 +283,11 @@
 
         <section data-scroll-section class="scroll_section contact">
             <div id="contact_contents">
-                <img class="contact_img" src="./images/pc_contact-100.png" alt="contact_photo">
+                <picture class="contact_img">
+                    <img class="pc_contact_img" src="./images/pc_contact-100.png" alt="contact_photo">
+                </picture>
+                <div class="contact_gradation">
+                </div>
                 <div class="portfolio_menu">
                     <div class="menu_title">
                         contact
@@ -299,10 +303,8 @@
                     </div>
                 </div>
                 <div class="customer-info">
-                    <div class="customer_info-form">
-                        名前
-                    </div>
-                    <div class="customer_info-form">
+
+                    <!-- <div class="customer_info-form">
                         <div class="customer_name">
                             <div class="customer_name01">
                                 性
@@ -329,7 +331,42 @@
                     </div>
                     <div class="customer-info_form_btn">
                         送信する
-                    </div>
+                    </div> -->
+                    <form
+                        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeERXSf-t-3XfI7QljaYylwZDVXWyuqm7Dw4Tr-Fl3aa2qBiw/formResponse"
+                        method="POST" class="c-form">
+                        <div class="c-form_item">
+                            <label class="c-form_label" for="field-name">
+                                名前<span class="c-form_required">必須</span>
+                            </label>
+                            <input name="entry.1259436556" class="c-form_input" id="field-name" placeholder="山田太郎"
+                                type="text" required="required" />
+                        </div>
+                        <div class="c-form_item">
+                            <label class="c-form_label" for="field-company">
+                                会社名
+                            </label>
+                            <input name="entry.207807465" class="c-form_input" id="field-company" placeholder="株式会社 山田"
+                                type="text" />
+                        </div>
+                        <div class="c-form_item">
+                            <label class="c-form_label" for="field-mail">
+                                メールアドレス<span class="c-form_required">必須</span>
+                            </label>
+                            <input name="entry.2103080850" class="c-form_input" id="field-mail"
+                                placeholder="sample@gmail.com" type="email" required="required" />
+                        </div>
+                        <div class="c-form_item">
+                            <label class="c-form_label" for="field-message">
+                                メッセージ内容<span class="c-form_required">必須</span>
+                            </label>
+                            <textarea name="entry.108689117" class="c-form_input" id="field-message"
+                                placeholder="お問い合わせ内容" required="required"></textarea>
+                        </div>
+                        <div class="c-form_submit">
+                            <button type="submit">送信する</button>
+                        </div>
+                    </form>
                 </div>
             </div>
 
