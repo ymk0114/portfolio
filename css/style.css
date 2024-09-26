@@ -82,7 +82,7 @@ body {
 }
 
 .contact {
-  width: 138.5vw;
+  width: 128vw;
 }
 
 .bottom {
@@ -238,7 +238,7 @@ header {
   height: 100%;
 }
 
-.gradation {
+.service_gradation {
   position: absolute;
   z-index: -2;
   width: 100%;
@@ -503,6 +503,7 @@ header {
 }
 
 #contact_contents {
+  position: relative;
   height: 100%;
   width: 100%;
   display: flex;
@@ -513,8 +514,28 @@ header {
   height: 100%;
 }
 
+.contact_gradation {
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    #ffffff00,
+    #dbcb7b 45%,
+    #dbcb7b 70%,
+    #ffffff00
+  );
+  opacity: 0.9;
+  filter: blur(30px);
+}
+
 #contact_contents .portfolio_menu {
   margin-left: -13%;
+}
+
+#contact_contents .portfolio_menu .menu_title {
+  color: #ffffff;
 }
 
 #contact_contents .portfolio_menu .menu_text {
@@ -530,11 +551,11 @@ header {
   color: #56402b;
   width: 640px;
   margin: auto 0;
-  margin-left: 13%;
+  margin-left: 8%;
 }
 
 .customer_info-form {
-  margin-bottom: 14px;
+  margin-bottom: 8%;
 }
 
 .customer_name {
@@ -599,3 +620,76 @@ footer {
   font-style: normal;
   color: #56402b;
 }
+
+.c-form {
+  width: 640px;
+  height: 100%;
+  margin: 0 auto;
+}
+.c-form_item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+.c-form_label,
+.c-form_input {
+  padding: 10px;
+}
+.c-form_label {
+  width: 90%;
+}
+.c-form_input {
+  width: 90%;
+  font-size: 16px;
+  border: solid 1px #333;
+  border-radius: 4px;
+}
+.c-form_input:focus-visible {
+  outline: green auto 1px;
+}
+.c-form_required {
+  color: #fff;
+  background-color: #c67039;
+  border-radius: 4px;
+  padding: 5px 5px;
+  margin: 0 0 0 18px;
+}
+textarea.c-form_input {
+  height: 160px;
+}
+.c-form_submit {
+  text-align: center;
+}
+.c-form_submit button {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #c67039;
+  /* border: solid 1px green; */
+  border-radius: 40px;
+  padding: 14px 63px;
+  transition: 0.4s;
+  cursor: pointer;
+  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+    "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+    "ＭＳ 明朝", serif;
+  font-feature-settings: "palt";
+}
+
+.c-form_submit button:hover {
+  color: green;
+  background-color: transparent;
+}
+
+/* @media (min-width: 640px) {
+  .c-form__item {
+    flex-wrap: nowrap;
+  }
+  .c-form__label {
+    width: 40%;
+  }
+  .c-form__input {
+    width: 55%;
+  }
+} */
