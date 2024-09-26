@@ -85,6 +85,7 @@ header {
 }
 
 .portfolio_title02 {
+  position: relative;
   font-size: 18px;
   font-family: "zen-kaku-gothic-new", sans-serif;
   font-weight: 700;
@@ -94,7 +95,9 @@ header {
 }
 
 .nav_list {
-  padding-right: 50px;
+  position: absolute;
+  top: 0;
+  right: 50px;
   text-align: right;
 }
 
@@ -139,6 +142,7 @@ header {
 }
 
 .works_wrapper {
+  position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -147,6 +151,7 @@ header {
 }
 
 .works_wrapper02 {
+  position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -159,6 +164,24 @@ header {
 /* .works_wrapper + .works_wrapper {
   margin-top: 120px;
 } */
+
+.gradation {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  z-index: -2;
+  width: 100%;
+  height: 240px;
+  background: linear-gradient(
+    to bottom,
+    #ffffff00,
+    #dbcb7b 45%,
+    #dbcb7b 70%,
+    #ffffff00
+  );
+  opacity: 0.9;
+  filter: blur(30px);
+}
 
 .pc_img {
   width: 342px;
@@ -190,6 +213,9 @@ header {
 }
 
 .stone2 {
+  /* position: fixed;
+  top: 0;
+  left: 0; */
   display: flex;
   justify-content: flex-end;
   margin-top: -100px;
