@@ -398,6 +398,14 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                     el: document.querySelector('[data-scroll-container]'),
                     direction: 'horizontal',
                     smooth: true,
+                    tablet: {
+                        direction: 'vertical',
+                        smooth: false,
+                    },
+                    smartphone: {
+                        direction: 'vertical',
+                        smooth: false,
+                    },
                 })
                 const links = document.querySelectorAll('.nav_list a')
                 links.forEach((link) => {
