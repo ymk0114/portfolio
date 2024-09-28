@@ -99,7 +99,7 @@ header {
 }
 
 .nav_list {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 50px;
   text-align: right;
@@ -154,6 +154,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #56402b;
 }
 
 .works_img01 img,
@@ -161,31 +162,29 @@ header {
   margin-bottom: 17px;
 }
 
+.works_content {
+  width: 382px;
+}
+
 .works_box li {
   font-size: 18px;
   color: #56402b;
-  padding: 28px 0;
-  /* border-bottom: 1px solid #56402b; */
+  padding-bottom: 28px;
 }
 
 .works_box li + li {
+  padding-top: 28px;
   border-top: 1px solid #56402b;
 }
 
-.category_content-mg {
-  margin-left: 77px;
+.item {
+  display: inline-block;
+  width: 95px;
+  padding-right: 77px;
 }
 
-.role_content-mg {
-  margin-left: 94px;
-}
-
-.tool_content-mg {
-  margin-left: 77px;
-}
-
-.period_content-mg {
-  margin-left: 94px;
+.text {
+  line-height: 2;
 }
 
 .works_wrapper02 {
@@ -204,7 +203,7 @@ header {
 
 .contact_text {
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 2.25;
   color: #56402b;
 }
@@ -238,6 +237,34 @@ header {
   transform: rotate(45deg); /* くの字の向き */
 }
 
+.contact-back_btn {
+  position: relative;
+  width: 450px;
+  height: 100px;
+  border-radius: 50px;
+  color: #56402b;
+  font-family: "a-otf-ryumin-pr6n", serif;
+  font-weight: 300;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 94px auto 0;
+  font-size: 30px;
+}
+
+.contact-back_btn::before {
+  position: absolute;
+  top: 40%;
+  left: 34%;
+  content: "";
+  width: 20px; /* くの字を山なりに見た時、左側の長さ */
+  height: 20px; /* くの字を山なりに見た時、右側の長さ */
+  border-top: 2px solid #56402b; /* くの字を山なりに見た時、左側の太さと色 */
+  border-right: 2px solid #56402b; /* くの字を山なりに見た時、右側の太さと色 */
+  transform: rotate(225deg); /* くの字の向き */
+}
+
 .copyright {
   font-size: 15px;
   font-family: "zen-kaku-gothic-new", sans-serif;
@@ -259,6 +286,7 @@ header {
   right: 0;
   display: flex;
   justify-content: flex-end;
+  z-index: -1;
 }
 
 .bottom_tree {
