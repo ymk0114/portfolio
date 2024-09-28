@@ -1,0 +1,305 @@
+@charset "utf-8";
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  /*デフォルトの文字色、font-familyを予め当てておく*/
+  color: #c67039;
+  /* font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", */
+  /* "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; */
+  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+    "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+    "ＭＳ 明朝", serif;
+  font-feature-settings: "palt";
+}
+
+a {
+  /*下線を消す*/
+  text-decoration: none;
+  /*色を消す*/
+  color: inherit;
+}
+
+ul {
+  /*左の「・」を消す*/
+  list-style: none;
+}
+
+img {
+  /* width: 100%;
+  height: 100%; */
+  vertical-align: bottom;
+  border: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* height: 100vh; */
+  margin: 0;
+  padding: 0;
+  background-image: url(../images/pc_works_background.jpg);
+  background-size: cover;
+  background-repeat: repeat-x;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* #works_list_portfolio_top {
+  position: relative;
+  height: 100vh;
+} */
+
+.portfolio_top02 {
+  position: relative;
+}
+
+.portfolio_title {
+  position: absolute;
+  top: 10%;
+  left: 75px;
+}
+
+.portfolio_title01 {
+  font-size: 40px;
+  font-family: "zen-kaku-gothic-new", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  margin-bottom: 35px;
+}
+
+.portfolio_title02 {
+  position: relative;
+  font-size: 18px;
+  font-family: "zen-kaku-gothic-new", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  margin-left: 6px;
+  letter-spacing: 0.38em;
+}
+
+.nav_list {
+  position: fixed;
+  top: 0;
+  right: 50px;
+  text-align: right;
+}
+
+.nav_list_text {
+  font-size: 20px;
+  font-family: "zen-kaku-gothic-new", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 0.8;
+  margin-top: 90px;
+}
+.nav_list_text + .nav_list_text {
+  margin-top: 17px;
+}
+
+.nav_icon {
+  width: 100%;
+  text-align: right;
+  margin-top: 170px;
+}
+
+.nav_icon img {
+  width: 38px;
+}
+
+.works_title {
+  text-align: center;
+  margin: -154px 0 145px;
+}
+
+.works_title-main {
+  font-size: 80px;
+  margin-bottom: 25px;
+}
+
+.works_wrapper01 {
+  display: flex;
+  justify-content: center;
+  gap: 6%;
+  margin-bottom: 175px;
+}
+
+.works_img {
+  display: flex;
+  align-items: center;
+}
+
+.works_img img {
+  width: 553px;
+}
+
+.works_content {
+  width: 382px;
+}
+
+.works_box li {
+  /* display: flex;
+  align-items: center;
+  height: 74px; */
+  font-size: 18px;
+  color: #56402b;
+  padding-bottom: 28px;
+}
+
+.works_box li + li {
+  padding-top: 28px;
+  border-top: 1px solid #56402b;
+}
+
+/* .works_box li .text {
+  margin-bottom: 0px;
+} */
+
+.item {
+  display: inline-block;
+  width: 95px;
+  padding-right: 77px;
+}
+
+.text {
+  line-height: 2;
+}
+
+.works_wrapper02 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 180px;
+  gap: 4%;
+}
+
+.img_pc {
+  width: 782px;
+  object-fit: contain;
+}
+
+.img_sp {
+  width: 270px;
+}
+
+/* .works_wrapper02 img {
+  width: 100%;
+  margin-bottom: 180px;
+} */
+
+.contact {
+  position: relative;
+}
+
+.contact_text {
+  text-align: center;
+  font-size: 18px;
+  line-height: 2.25;
+  color: #56402b;
+}
+
+.contact_btn {
+  position: relative;
+  width: 450px;
+  height: 100px;
+  border-radius: 50px;
+  background: #c67039;
+  color: #ffffff;
+  font-family: "a-otf-ryumin-pr6n", serif;
+  font-weight: 300;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto 0;
+  font-size: 45px;
+}
+
+.contact_btn::after {
+  position: absolute;
+  top: 40%;
+  right: 10%;
+  content: "";
+  width: 20px; /* くの字を山なりに見た時、左側の長さ */
+  height: 20px; /* くの字を山なりに見た時、右側の長さ */
+  border-top: 2px solid #ffffff; /* くの字を山なりに見た時、左側の太さと色 */
+  border-right: 2px solid #ffffff; /* くの字を山なりに見た時、右側の太さと色 */
+  transform: rotate(45deg); /* くの字の向き */
+}
+
+.contact-back_btn {
+  position: relative;
+  width: 450px;
+  height: 100px;
+  border-radius: 50px;
+  color: #56402b;
+  font-family: "a-otf-ryumin-pr6n", serif;
+  font-weight: 300;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 94px auto 0;
+  font-size: 30px;
+}
+
+.contact-back_btn::before {
+  position: absolute;
+  top: 40%;
+  left: 34%;
+  content: "";
+  width: 20px; /* くの字を山なりに見た時、左側の長さ */
+  height: 20px; /* くの字を山なりに見た時、右側の長さ */
+  border-top: 2px solid #56402b; /* くの字を山なりに見た時、左側の太さと色 */
+  border-right: 2px solid #56402b; /* くの字を山なりに見た時、右側の太さと色 */
+  transform: rotate(225deg); /* くの字の向き */
+}
+
+.copyright {
+  font-size: 15px;
+  font-family: "zen-kaku-gothic-new", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #56402b;
+  margin-top: 128px;
+  text-align: center;
+  padding-bottom: 35px;
+}
+
+.mgr-20 {
+  margin-right: 20px;
+}
+
+.bottom_img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  z-index: -1;
+}
+
+.bottom_tree {
+  width: 802px;
+}
