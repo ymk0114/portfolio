@@ -67,6 +67,7 @@ body {
 
 .top {
   width: 100vw;
+  z-index: 100;
 }
 
 .service {
