@@ -94,15 +94,17 @@ header {
   display: flex;
 }
 
-#portfolio_top {
+.portfolio_top01 {
   position: relative;
   height: 100vh;
+  width: 45vw;
 }
 
 .portfolio_title {
   position: absolute;
   top: 10%;
-  left: 75px;
+  left: 12%;
+  width: 100%;
 }
 
 .portfolio_title01 {
@@ -124,11 +126,15 @@ header {
 }
 
 .portfolio_lead {
-  margin-top: -25%;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+  /* margin-top: -25%; */
 }
 
 .portfolio_lead-ja {
-  margin-left: 20%;
+  margin-left: 18%;
   line-height: 1.5;
   font-size: 45px;
   font-family: "a-otf-ryumin-pr6n", serif;
@@ -141,11 +147,53 @@ header {
 .portfolio_lead_en {
   font-size: 14px;
   margin: 3% 0 0 10%;
+  width: 100%;
 }
 
 .portfolio_top02 {
-  width: 100%;
-  margin: 85px 0 0 -17%;
+  position: absolute;
+  top: 10%;
+  left: 57%;
+  width: 70vw;
+  /* margin: 6% 0 0 -17%; */
+}
+
+@media screen and (max-width: 1100px) {
+  .scroll_section {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/pc_works_background.jpg);
+    background-size: cover;
+    background-repeat: repeat-x;
+    flex-shrink: 0;
+  }
+
+  .portfolio_tree img {
+    width: 140%;
+  }
+
+  .portfolio_title01 {
+    font-size: 30px;
+  }
+
+  .portfolio_title02 {
+    font-size: 15px;
+  }
+
+  .portfolio_lead-ja {
+    margin-left: 20%;
+    font-size: 36px;
+  }
+
+  .portfolio_top02 {
+    position: absolute;
+    top: 15%;
+    left: 57%;
+  }
+
+  .top_img img {
+    width: 65vw;
+  }
 }
 
 .header_wrap {
@@ -167,7 +215,25 @@ header {
   display: flex;
 }
 
-.nav_list {
+/* @media screen and (max-width: 767px) {
+  .portfolio_title01 {
+    font-size: 30px;
+  }
+  .p2 {
+    font-size: 57px;
+  }
+  .p3 {
+    font-size: 16px;
+  }
+  .p4 {
+    font-size: 38px;
+  }
+  .p5 {
+    font-size: 14px;
+  }
+} */
+
+.pc_nav_list {
   position: absolute;
   top: 0;
   right: 0;
@@ -189,6 +255,99 @@ header {
 
 .nav_icon {
   margin-top: 170px;
+}
+
+/* スマホ版メニュー */
+.sp_nav_list,
+.sp_btn {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .pc_nav_list {
+    display: none;
+  }
+
+  .sp_nav_list,
+  .sp_btn {
+    display: block;
+  }
+
+  .sp_btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    display: block;
+    height: 23px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .sp_btn span {
+    display: block;
+    width: 67px;
+    height: 3px;
+    background: #c67039;
+    border-radius: 2px;
+    position: relative;
+    top: 10px;
+    transition: 0.3s;
+  }
+  .sp_btn span::before {
+    content: "";
+    display: block;
+    width: 67px;
+    height: 3px;
+    background: #c67039;
+    border-radius: 2px;
+    position: absolute;
+    transition: 0.3s;
+  }
+
+  .sp_btn span::before {
+    bottom: 12px;
+  }
+
+  .sp_btn.open span {
+    background: transparent;
+  }
+
+  .sp_btn.open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+
+  .sp_btn.open span {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  /* SP版メニュー */
+  /* .sp_nav_list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+  }
+
+  .sp_nav_list ul {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sp_nav_list ul li {
+    color: #fff;
+    padding: 20px;
+    font-size: 18px;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+      "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    font-weight: bold;
+  } */
 }
 
 .top_scroll {
@@ -215,6 +374,15 @@ header {
   height: 3px;
   background-color: #c67039;
   margin-left: 35px;
+}
+
+@media screen and (max-width: 1100px) {
+  .top_scroll {
+    position: fixed;
+    top: 89%;
+    left: 50%;
+    display: block;
+  }
 }
 
 #service_contents {

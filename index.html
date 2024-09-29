@@ -17,36 +17,74 @@
 <body>
     <div class="portfolio_top03" data-scroll data-scroll-sticky data-scroll-target="#scroll_container">
         <div class="header_wrap">
-            <ul class="nav_list">
-                <li class="nav_list_text">
-                    <a href="#portfolio_top">
-                        home
-                    </a>
-                </li>
-                <li class="nav_list_text">
-                    <a href="#service_contents">
-                        service
-                    </a>
-                </li>
-                <li class="nav_list_text">
-                    <a href="#works_contents">
-                        works
-                    </a>
-                </li>
-                <li class="nav_list_text">
-                    <a href="#about_contents">
-                        about
-                    </a>
-                </li>
-                <li class="nav_list_text">
-                    <a href="#contact_contents">
-                        contact
-                    </a>
-                </li>
-                <li class="nav_icon">
-                    <img src="./images/instagram-100.png" alt="instagram">
-                </li>
-            </ul>
+            <nav class="pc_nav_list">
+                <ul>
+                    <li class="nav_list_text">
+                        <a href="#portfolio_top">
+                            home
+                        </a>
+                    </li>
+                    <li class="nav_list_text">
+                        <a href="#service_contents">
+                            service
+                        </a>
+                    </li>
+                    <li class="nav_list_text">
+                        <a href="#works_contents">
+                            works
+                        </a>
+                    </li>
+                    <li class="nav_list_text">
+                        <a href="#about_contents">
+                            about
+                        </a>
+                    </li>
+                    <li class="nav_list_text">
+                        <a href="#contact_contents">
+                            contact
+                        </a>
+                    </li>
+                    <li class="nav_icon">
+                        <img src="./images/instagram-100.png" alt="instagram">
+                    </li>
+                </ul>
+            </nav>
+
+            <nav class="sp_nav_list">
+                <ul>
+                    <li class="nav_list_text">
+                        <a href="#portfolio_top">
+                            home
+                        </a>
+                    </li>
+                    <li class="nav_list_text">
+                        <a href="#service_contents">
+                            service
+                        </a>
+                    </li>
+                    <li class="nav_list_text">
+                        <a href="#works_contents">
+                            works
+                        </a>
+                    </li>
+                    <li class="nav_list_text">
+                        <a href="#about_contents">
+                            about
+                        </a>
+                    </li>
+                    <li class="nav_list_text">
+                        <a href="#contact_contents">
+                            contact
+                        </a>
+                    </li>
+                    <li class="nav_icon">
+                        <img src="./images/instagram-100.png" alt="instagram">
+                    </li>
+                </ul>
+                <div class="sp_btn">
+                    <span></span>
+                </div>
+            </nav>
         </div>
 
     </div>
@@ -73,12 +111,17 @@
                             A design that harmonizes the ideas of many people
                         </div>
                     </div>
+                    <div class="portfolio_top02">
+                        <picture class="top_img">
+                            <img src="./images/pc_top-100.png" alt="top_photo">
+                        </picture>
+                    </div>
                 </div>
-                <div class="portfolio_top02">
+                <!-- <div class="portfolio_top02">
                     <picture class="top_img">
                         <img src="./images/pc_top-100.png" alt="top_photo">
                     </picture>
-                </div>
+                </div> -->
                 <div class="top_scroll">
                     <span class="mgr-20">scroll</span>down
                 </div>
@@ -383,6 +426,14 @@
             </footer>
         </section>
     </main>
+    <script>
+        $(function () {
+            $('.sp_btn').on("click", function () {
+                $('.sp_btn').toggleClass("open");
+                $('.sp_nav_list').fadeToggle();
+            })
+        })
+    </script>
     <script type="text/javascript">
         let submitted = false;
     </script>
