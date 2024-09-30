@@ -71,23 +71,28 @@ body {
 }
 
 .service {
-  width: 101.2vw;
+  width: 108vw;
+  height: 100vh;
 }
 
 .works {
   width: 108.9vw;
+  height: 100vh;
 }
 
 .about {
-  width: 125.5vw;
+  width: 128.8vw;
+  height: 100vh;
 }
 
 .contact {
   width: 128vw;
+  height: 100vh;
 }
 
 .bottom {
   width: 33.4vw;
+  height: 100vh;
 }
 
 header {
@@ -215,6 +220,12 @@ header {
   display: flex;
 }
 
+@media screen and (max-width: 1100px) {
+  #scroll_container {
+    flex-direction: column;
+  }
+}
+
 /* @media screen and (max-width: 767px) {
   .portfolio_title01 {
     font-size: 30px;
@@ -258,7 +269,7 @@ header {
 }
 
 /* スマホ版メニュー */
-.sp_nav_list,
+
 .sp_btn {
   display: none;
 }
@@ -378,10 +389,20 @@ header {
 
 @media screen and (max-width: 1100px) {
   .top_scroll {
-    position: fixed;
-    top: 89%;
+    position: absolute;
+    top: 750px;
     left: 50%;
     display: block;
+  }
+
+  .top_scroll::after {
+    content: "";
+    width: 3px;
+    height: 200px;
+    background-color: #c67039;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
   }
 }
 
@@ -400,7 +421,7 @@ header {
   display: inline-block;
   height: 100%;
   /* margin-left: -137px; */
-  z-index: -1;
+  z-index: 100;
 }
 
 .pc_service_img {
@@ -409,8 +430,9 @@ header {
 
 .service_gradation {
   position: absolute;
-  z-index: -2;
-  width: 100%;
+  left: 5%;
+  /* z-index: -2; */
+  width: 1335px;
   height: 100%;
   background: linear-gradient(
     to right,
@@ -425,6 +447,7 @@ header {
 
 #service_contents .portfolio_menu {
   margin-left: 17%;
+  z-index: 200;
 }
 
 .menu_title {
@@ -454,6 +477,7 @@ header {
   font-weight: 300;
   font-style: normal;
   padding-left: 25px;
+  white-space: nowrap;
 }
 
 .service_card {
@@ -518,6 +542,55 @@ header {
   font-size: 18px;
   line-height: 2;
   color: #ffffff;
+}
+
+@media screen and (max-width: 1100px) {
+  #service_contents {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service_img img {
+    width: 100%;
+  }
+
+  /* #service_contents .portfolio_menu {
+    margin-left: 0;
+    margin: 0 auto;
+  } */
+
+  #service_contents .portfolio_menu .menu_title {
+    margin: 20% 0 40px;
+    font-size: 60px;
+    font-family: "a-otf-ryumin-pr6n", serif;
+    font-weight: 300;
+    font-style: normal;
+    padding-left: 20px;
+    display: flex;
+    /* color: #ffffff; */
+  }
+
+  .service_gradation {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    /* z-index: -2; */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      #ffffff00,
+      #dbcb7b 45%,
+      #dbcb7b 70%,
+      #ffffff00
+    );
+    opacity: 0.9;
+    filter: blur(30px);
+  }
+
+  .service_card {
+    margin: 80px auto;
+  }
 }
 
 #works_contents {
@@ -618,6 +691,34 @@ header {
   object-position: center;
 }
 
+@media screen and (max-width: 1100px) {
+  #works_contents {
+    flex-direction: column;
+  }
+
+  .works_img {
+    justify-content: flex-end;
+  }
+
+  #works_contents .portfolio_menu {
+    margin-left: 17%;
+    margin-right: 0;
+    margin-bottom: 80px;
+  }
+
+  #works_contents .portfolio_menu .menu_title {
+    margin-top: 0px;
+  }
+
+  .works_circle-img {
+    width: 100%;
+  }
+
+  .swiper {
+    width: 90%;
+  }
+}
+
 #about_contents {
   display: flex;
   height: 100vh;
@@ -646,6 +747,7 @@ header {
   z-index: 200;
   margin-top: 10%;
   margin-left: 4%;
+  width: 102%;
 }
 
 .name {
@@ -655,6 +757,7 @@ header {
   font-weight: 300;
   font-style: normal;
   margin-bottom: 65px;
+  white-space: nowrap;
 }
 
 .name01 {
@@ -680,13 +783,20 @@ header {
 }
 
 .contact_img {
+  position: absolute;
+  height: 100%;
+}
+
+.contact_img img {
   height: 100%;
 }
 
 .contact_gradation {
   position: absolute;
-  z-index: -2;
-  width: 100%;
+  top: 0;
+  left: 30%;
+  /* z-index: -2; */
+  width: 1365px;
   height: 100%;
   background: linear-gradient(
     to right,
@@ -700,7 +810,8 @@ header {
 }
 
 #contact_contents .portfolio_menu {
-  margin-left: -13%;
+  margin-left: 37%;
+  z-index: 100;
 }
 
 #contact_contents .portfolio_menu .menu_title {
@@ -711,8 +822,9 @@ header {
   font-size: 16px;
   color: #56402b;
   line-height: 2.25;
-  margin-left: 25%;
+  margin-left: 35%;
   margin-top: 15%;
+  white-space: nowrap;
 }
 
 .customer-info {
@@ -721,6 +833,7 @@ header {
   width: 640px;
   margin: auto 0;
   margin-left: 8%;
+  z-index: 100;
 }
 
 .customer_info-form {
@@ -794,6 +907,7 @@ footer {
   width: 640px;
   height: 100%;
   margin: 0 auto;
+  margin-left: 20px;
 }
 .c-form_item {
   display: flex;
