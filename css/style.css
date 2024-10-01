@@ -270,7 +270,8 @@ header {
 
 /* スマホ版メニュー */
 
-.sp_btn {
+.sp_btn,
+.sp_nav_list {
   display: none;
 }
 
@@ -279,14 +280,13 @@ header {
     display: none;
   }
 
-  .sp_nav_list,
   .sp_btn {
     display: block;
   }
 
   .sp_btn {
     position: absolute;
-    top: 0;
+    top: 50px;
     right: 25px;
     display: block;
     height: 23px;
@@ -298,7 +298,7 @@ header {
     width: 67px;
     height: 3px;
     background: #c67039;
-    border-radius: 2px;
+    border-radius: 3px;
     position: relative;
     top: 10px;
     transition: 0.3s;
@@ -309,7 +309,7 @@ header {
     width: 67px;
     height: 3px;
     background: #c67039;
-    border-radius: 2px;
+    border-radius: 3px;
     position: absolute;
     transition: 0.3s;
   }
@@ -318,13 +318,13 @@ header {
     bottom: 12px;
   }
 
-  .sp_btn.open span {
+  /* .sp_btn.open span {
     background: transparent;
-  }
+  } */
 
   .sp_btn.open span::before {
     bottom: 0;
-    transform: rotate(45deg);
+    transform: rotate(90deg);
   }
 
   .sp_btn.open span {

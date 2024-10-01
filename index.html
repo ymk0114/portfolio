@@ -85,6 +85,7 @@
             </nav>
             <div class="sp_btn">
                 <span></span>
+                <!-- <span></span> -->
             </div>
         </div>
 
@@ -476,6 +477,16 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
 
                     initScroll();
                 });
+                window.addEventListener('load', function () {
+                    const hash = window.location.hash
+                    if (hash) {
+                        scroll.update()
+                        const target = document.querySelector(hash)
+                        if (target) {
+                            scroll.scrollTo(target)
+                        }
+                    }
+                })
                 const links = document.querySelectorAll('.nav_list a')
                 links.forEach((link) => {
                     const href = link.getAttribute('href')
