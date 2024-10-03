@@ -109,7 +109,7 @@
                         <div class="portfolio_lead-ja">
                             いろんな人の想いが、<br>調和したデザイン。
                         </div>
-                        <div class="portfolio_lead_en">
+                        <div class="portfolio_lead-en">
                             A design that harmonizes the ideas of many people
                         </div>
                     </div>
@@ -117,13 +117,19 @@
                         <picture class="top_img">
                             <img src="./images/pc_top-100.png" alt="top_photo">
                         </picture>
+                        <div class="sp_portfolio_lead">
+                            <div class="sp_portfolio_lead-ja">
+                                いろんな人の想いが、<br>調和したデザイン。
+                            </div>
+                            <div class="sp_portfolio_lead-en">
+                                A design that harmonizes the ideas of many people
+                            </div>
+                        </div>
+                        <div class="sp_top_scroll">
+                            <span class="mgr-20">scroll</span>down
+                        </div>
                     </div>
                 </div>
-                <!-- <div class="portfolio_top02">
-                    <picture class="top_img">
-                        <img src="./images/pc_top-100.png" alt="top_photo">
-                    </picture>
-                </div> -->
                 <div class="top_scroll">
                     <span class="mgr-20">scroll</span>down
                 </div>
@@ -133,10 +139,21 @@
 
         <section data-scroll-section class="scroll_section service">
             <div id="service_contents">
-                <picture class="service_img">
-                    <source srcset="./images/sp_service-100.png" media="(max-width: 1100px)">
-                    <img src="./images/pc_service-100.png" alt="service_photo">
-                </picture>
+                <div class="service_img_box">
+                    <picture class="service_img">
+                        <source srcset="./images/sp_service-100.png" media="(max-width: 767px)">
+                        <source srcset="./images/tablet_service-100.png" media="(max-width: 1100px)">
+                        <img src="./images/pc_service-100.png" alt="service_photo">
+                    </picture>
+                    <div class="sp_portfolio_menu">
+                        <div class="menu_title">
+                            service
+                        </div>
+                        <div class="sp_menu_subtitle">
+                            できること
+                        </div>
+                    </div>
+                </div>
                 <div class="service_gradation">
                 </div>
                 <div class="portfolio_menu">
@@ -217,16 +234,15 @@
                         </div>
                     </div>
                 </div>
+                <picture class="works_img">
+                    <source srcset="./images/sp_works-100.png" media="(max-width: 1100px)">
+                    <img src="./images/pc_works-100.png" alt="works_photo">
+                </picture>
             </div>
         </section>
 
         <section data-scroll-section class="scroll_section works">
             <div id="works_contents">
-                <picture class="works_img">
-                    <source srcset="./images/sp_works-100.png" media="(max-width: 1100px)">
-                    <img src="./images/pc_works-100.png" alt="works_photo">
-                </picture>
-
                 <div class="portfolio_menu">
                     <div class="menu_title">
                         works
@@ -276,17 +292,24 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section data-scroll-section class="scroll_section about">
-            <div id="about_contents">
                 <picture class="about_img01">
+                    <source srcset="./images/sp_works.png" media="(max-width: 1100px)">
                     <img src="./images/pc_about-100.png" alt="tree">
                 </picture>
                 <picture class="about_img02">
                     <img src="./images/pc_about02-100.png" alt="石">
                 </picture>
+            </div>
+        </section>
+
+        <section data-scroll-section class="scroll_section about">
+            <div id="about_contents">
+                <!-- <picture class="about_img01">
+                    <img src="./images/pc_about-100.png" alt="tree">
+                </picture>
+                <picture class="about_img02">
+                    <img src="./images/pc_about02-100.png" alt="石">
+                </picture> -->
                 <div class="portfolio_menu">
                     <div class="menu_title">
                         about
@@ -296,6 +319,7 @@
                     </div>
                 </div>
                 <picture class="about_portrait">
+                    <source srcset="./images/sp_about-100.png" media="(max-width: 1100px)">
                     <img src="./images/pc_about-portrait-100.png" alt="わたし">
                 </picture>
                 <div class="profile_box">
@@ -326,14 +350,18 @@
                         仕事をする上での大事な軸に。<br>
                     </div>
                 </div>
+                <picture class="contact_img">
+                    <source srcset="./images/sp_contact-100.png" media="(max-width: 1100px)">
+                    <img class="pc_contact_img" src="./images/pc_contact-100.png" alt="contact_photo">
+                </picture>
             </div>
         </section>
 
         <section data-scroll-section class="scroll_section contact">
             <div id="contact_contents">
-                <picture class="contact_img">
+                <!-- <picture class="contact_img">
                     <img class="pc_contact_img" src="./images/pc_contact-100.png" alt="contact_photo">
-                </picture>
+                </picture> -->
                 <div class="contact_gradation">
                 </div>
                 <div class="portfolio_menu">
@@ -423,6 +451,7 @@
         <section data-scroll-section class="scroll_section bottom">
             <footer>
                 <picture class="footer_img">
+                    <source srcset="./images/pc_woks_bottom.png" media="(max-width: 1100px)">
                     <img src="./images/pc_footer-100.png" alt="tree">
                 </picture>
                 <div class="copyright">
@@ -430,6 +459,7 @@
                 </div>
             </footer>
         </section>
+
     </main>
     <script>
         $(function () {
