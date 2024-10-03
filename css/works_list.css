@@ -214,6 +214,10 @@ header {
   width: 134px;
 }
 
+.sp_works_container {
+  display: none;
+}
+
 @media screen and (max-width: 1100px) {
   .gradation {
     height: 270px;
@@ -231,13 +235,17 @@ header {
 }
 
 @media screen and (max-width: 767px) {
+  .works_container {
+    display: none;
+  }
+
   .portfolio_tree img {
     width: 67%;
   }
 
   .portfolio_title {
     position: absolute;
-    top: 7%;
+    top: 50px;
     left: 5%;
   }
 
@@ -248,6 +256,7 @@ header {
 
   .portfolio_title02 {
     font-size: 12px;
+    margin-left: 4px;
   }
 
   .works_title {
@@ -263,34 +272,38 @@ header {
     font-size: 20px;
   }
 
-  .works_container {
+  .sp_works_container {
+    display: block;
     margin-bottom: 0;
   }
 
-  #works_wrapper-01,
-  #works_wrapper-02,
-  #works_wrapper-03,
-  #works_wrapper-04 {
+  .stone1,
+  .stone2 {
+    display: none;
+  }
+
+  #sp_works_wrapper-01,
+  #sp_works_wrapper-02,
+  #sp_works_wrapper-03,
+  #sp_works_wrapper-04,
+  #sp_works_wrapper-05,
+  #sp_works_wrapper-06,
+  #sp_works_wrapper-07,
+  #sp_works_wrapper-08 {
+    position: relative;
     flex-direction: column;
     align-items: center;
     margin-bottom: 0;
-    padding-top: 0;
+    padding-top: 20px;
+    color: #56402b;
   }
 
   .gradation {
     position: absolute;
-    top: 4%;
-    left: 0;
-    height: 230px;
-  }
-
-  .gradation::after {
-    position: absolute;
-    top: 150%;
-    left: 0;
+    bottom: 0;
+    z-index: -2;
     width: 100%;
-    height: 230px;
-    content: "";
+    height: 100%;
     background: linear-gradient(
       to bottom,
       #ffffff00,
@@ -300,11 +313,38 @@ header {
     );
     opacity: 0.9;
     filter: blur(30px);
+    display: block;
   }
+
+  /* .gradation {
+    position: absolute;
+    top: 65%;
+    left: 0;
+    z-index: -2;
+    width: 100%;
+    height: 270px;
+    background: linear-gradient(
+      to bottom,
+      #ffffff00,
+      #dbcb7b 45%,
+      #dbcb7b 70%,
+      #ffffff00
+    );
+    opacity: 0.9;
+    filter: blur(30px);
+    display: block;
+  } */
 
   .works_content {
     width: 66%;
-    margin-bottom: 140px;
+    margin: 0 auto;
+    margin-bottom: 45%;
+  }
+
+  .works_content img {
+    width: 100%;
+    height: 87%;
+    object-fit: contain;
   }
 
   .works_service,

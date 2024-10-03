@@ -137,6 +137,18 @@ header {
   margin-bottom: 25px;
 }
 
+@media screen and (max-width: 1100px) {
+  .portfolio_title01 {
+    font-size: 35px;
+  }
+
+  .pc_img,
+  .pc-tablet-sp_img,
+  .banner_img {
+    width: 100%;
+  }
+}
+
 .works_wrapper01 {
   display: flex;
   justify-content: center;
@@ -197,15 +209,114 @@ header {
   margin-bottom: 180px;
 }
 
+@media screen and (max-width: 1100px) {
+  .item {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio_tree img {
+    width: 67%;
+  }
+
+  .portfolio_title {
+    position: absolute;
+    top: 50px;
+    left: 5%;
+  }
+
+  .portfolio_title01 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .portfolio_title02 {
+    font-size: 12px;
+    margin-left: 4px;
+  }
+
+  .works_title {
+    margin-top: 0;
+    margin-bottom: 100px;
+  }
+
+  .works_title-main {
+    font-size: 50px;
+  }
+
+  .works_list-sub {
+    font-size: 20px;
+  }
+
+  .works_wrapper01 {
+    flex-direction: column;
+    align-items: center;
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  .works_img {
+    gap: 14%;
+    font-size: 14px;
+  }
+
+  .works_img01 img,
+  .works_img02 img {
+    width: 100%;
+  }
+
+  .works_content {
+    /* width: 104%; */
+    width: 252px;
+    margin-top: 55px;
+  }
+
+  .works_box li {
+    font-size: 13px;
+    padding-bottom: 9px;
+  }
+
+  .works_box li + li {
+    padding-top: 23px;
+  }
+
+  .item {
+    padding-left: 10px;
+    padding-right: 5%;
+  }
+
+  /* .text {
+    margin-bottom: 100px;
+  } */
+
+  .works_wrapper02 {
+    width: 67%;
+    margin: 100px auto 150px;
+  }
+
+  .works_wrapper02 img {
+    margin-bottom: 0;
+  }
+
+  .works_wrapper02 img + img {
+    margin-top: 50px;
+  }
+}
+
 .contact {
   position: relative;
 }
 
-.contact_text {
+.pc_contact_text {
   text-align: center;
   font-size: 18px;
   line-height: 2.25;
   color: #56402b;
+}
+
+.sp_contact_text {
+  display: none;
 }
 
 .contact_btn {
@@ -237,7 +348,7 @@ header {
   transform: rotate(45deg); /* くの字の向き */
 }
 
-.contact-back_btn {
+.pc_contact-back_btn {
   position: relative;
   width: 450px;
   height: 100px;
@@ -253,7 +364,7 @@ header {
   font-size: 30px;
 }
 
-.contact-back_btn::before {
+.pc_contact-back_btn::before {
   position: absolute;
   top: 40%;
   left: 34%;
@@ -263,6 +374,10 @@ header {
   border-top: 2px solid #56402b; /* くの字を山なりに見た時、左側の太さと色 */
   border-right: 2px solid #56402b; /* くの字を山なりに見た時、右側の太さと色 */
   transform: rotate(225deg); /* くの字の向き */
+}
+
+.sp_contact-back_btn {
+  display: none;
 }
 
 .copyright {
@@ -291,4 +406,112 @@ header {
 
 .bottom_tree {
   width: 802px;
+}
+
+@media screen and (max-width: 1100px) {
+  .contact_text {
+    font-size: 16px;
+  }
+
+  .contact_btn {
+    width: 300px;
+    height: 75px;
+    font-size: 30px;
+  }
+
+  .pc_contact-back_btn {
+    margin: 30px auto 0;
+    font-size: 20px;
+  }
+
+  .pc_contact-back_btn::before {
+    top: 45%;
+    left: 34%;
+    width: 10px; /* くの字を山なりに見た時、左側の長さ */
+    height: 10px; /* くの字を山なりに見た時、右側の長さ */
+  }
+
+  .copyright {
+    margin-bottom: 30px;
+  }
+
+  .bottom_img {
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+  }
+
+  .bottom_tree {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pc_contact_text {
+    display: none;
+  }
+
+  .sp_contact_text {
+    display: block;
+    text-align: center;
+    color: #56402b;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .contact_btn {
+    width: 230px;
+    height: 56px;
+    font-size: 20px;
+  }
+
+  .contact_btn::after {
+    position: absolute;
+    /* top: 40%; */
+    right: 10%;
+    content: "";
+    width: 13px; /* くの字を山なりに見た時、左側の長さ */
+    height: 13px; /* くの字を山なりに見た時、右側の長さ */
+    border-top: 2px solid #ffffff; /* くの字を山なりに見た時、左側の太さと色 */
+    border-right: 2px solid #ffffff; /* くの字を山なりに見た時、右側の太さと色 */
+    transform: rotate(45deg); /* くの字の向き */
+  }
+
+  .pc_contact-back_btn {
+    display: none;
+  }
+
+  .sp_contact-back_btn {
+    position: relative;
+    width: 230px;
+    height: 100px;
+    border-radius: 50px;
+    color: #56402b;
+    font-family: "a-otf-ryumin-pr6n", serif;
+    font-weight: 300;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+
+  .sp_contact-back_btn::before {
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    content: "";
+    width: 8px; /* くの字を山なりに見た時、左側の長さ */
+    height: 8px; /* くの字を山なりに見た時、右側の長さ */
+    border-top: 2px solid #56402b; /* くの字を山なりに見た時、左側の太さと色 */
+    border-right: 2px solid #56402b; /* くの字を山なりに見た時、右側の太さと色 */
+    transform: rotate(225deg); /* くの字の向き */
+  }
+
+  .copyright {
+    font-size: 12px;
+    padding-bottom: 0;
+    margin-top: 0;
+  }
 }
