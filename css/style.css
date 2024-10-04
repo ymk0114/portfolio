@@ -810,6 +810,7 @@ header {
   .service_gradation {
     top: 0;
     height: 95%;
+    width: 100%;
   }
 
   .service_card {
@@ -1361,6 +1362,10 @@ header {
     margin: auto;
     color: #56402b;
     line-height: 2.25;
+  }
+
+  .contact_gradation {
+    width: 100%;
   }
 }
 
