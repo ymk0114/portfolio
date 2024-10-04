@@ -283,7 +283,7 @@ header {
     display: block;
     position: static;
     margin-left: 9%;
-    width: 100%;
+    width: auto;
     top: 536px;
     /* left: 9%; */
     white-space: nowrap;
