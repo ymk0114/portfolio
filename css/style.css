@@ -176,7 +176,7 @@ header {
 @media screen and (max-width: 1100px) {
   .scroll_section {
     width: 100%;
-    height: 100%;
+    height: auto;
     background-image: url(../images/pc_works_background.jpg);
     background-size: cover;
     background-repeat: repeat-x;
@@ -185,7 +185,7 @@ header {
 
   #portfolio_top {
     display: block;
-    height: 995px;
+    /* height: 995px; */
   }
 
   .portfolio_tree img {
@@ -200,38 +200,6 @@ header {
     font-size: 15px;
   }
 
-  /* .portfolio_lead {
-    display: none;
-  }
-
-  .sp_portfolio_lead {
-    display: block;
-    position: static;
-    margin-left: 9%;
-    width: 100%;
-    
-  }
-
-  .sp_portfolio_lead-ja {
-    margin-left: 18%;
-    line-height: 1.5;
-    font-size: 45px;
-    font-family: "a-otf-ryumin-pr6n", serif;
-    font-weight: 300;
-    font-style: normal;
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    font-feature-settings: initial;
-    margin-left: 20%;
-    font-size: 36px;
-  }
-
-  .sp_portfolio_lead-en {
-    font-size: 14px;
-    margin: 3% 0 0 10%;
-    width: 100%;
-  } */
-
   .portfolio_top02 {
     position: absolute;
     top: 15%;
@@ -244,13 +212,14 @@ header {
 }
 
 @media screen and (max-width: 767px) {
-  #portfolio_top {
+  /* #portfolio_top {
     height: 127vh;
-    /* margin-bottom: 70%; */
-  }
+    margin-bottom: 70%;
+  } */
 
   .portfolio_top01 {
     width: 100%;
+    height: auto;
   }
 
   .portfolio_tree img {
@@ -284,8 +253,6 @@ header {
     position: static;
     margin-left: 9%;
     width: auto;
-    top: 536px;
-    /* left: 9%; */
     white-space: nowrap;
   }
 
@@ -308,14 +275,13 @@ header {
   }
 
   .portfolio_top02 {
-    top: 25%;
-    left: 50%;
+    position: static;
     width: 100%;
-    transform: translateX(-50%);
   }
 
   .top_img img {
     width: 100%;
+    margin-top: -20px;
   }
 }
 
@@ -715,6 +681,7 @@ header {
   #service_contents {
     display: flex;
     flex-direction: column;
+    height: auto;
   }
 
   .service_img img {
@@ -765,8 +732,12 @@ header {
 }
 
 @media screen and (max-width: 767px) {
-  #service_contents {
+  /* #service_contents {
     height: 100%;
+  } */
+
+  .service {
+    height: auto;
   }
 
   .service_img_box {
@@ -993,7 +964,11 @@ header {
 
 @media screen and (max-width: 767px) {
   #works_contents {
-    height: 100%;
+    height: auto;
+  }
+
+  .works {
+    height: auto;
   }
 
   #works_contents .portfolio_menu {
@@ -1150,6 +1125,10 @@ header {
 }
 
 @media screen and (max-width: 767px) {
+  .about {
+    height: auto;
+  }
+
   #about_contents .portfolio_menu {
     position: static;
     margin-left: 0;
@@ -1325,6 +1304,14 @@ header {
 }
 
 @media screen and (max-width: 767px) {
+  .contact {
+    height: auto;
+  }
+
+  #contact_contents {
+    height: auto;
+  }
+
   #contact_contents .portfolio_menu .menu_text {
     display: none;
   }
