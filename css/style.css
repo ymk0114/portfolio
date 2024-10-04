@@ -259,8 +259,10 @@ header {
 
   .portfolio_title {
     top: 8%;
-    left: 5%;
+    left: 0;
+    width: auto;
     white-space: nowrap;
+    margin-left: 5%;
   }
 
   .portfolio_title01 {
