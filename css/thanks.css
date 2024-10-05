@@ -19,11 +19,11 @@ li {
   line-height: 1;
   /*デフォルトの文字色、font-familyを予め当てておく*/
   color: #c67039;
-  /* font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", */
-  /* "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; */
-  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ";
+  /* "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  /* font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
     "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
-    "ＭＳ 明朝", serif;
+    "ＭＳ 明朝", serif; */
   font-feature-settings: "palt";
 }
 
@@ -48,4 +48,42 @@ img {
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  /* height: 100vh; */
+  margin: 0;
+  padding: 0;
+  background-image: url(../images/pc_works_background.jpg);
+  background-size: cover;
+  background-repeat: repeat-x;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.thanks_title {
+  font-size: 4.3vw;
+  text-align: center;
+  margin-bottom: 5%;
+  font-weight: 600;
+}
+
+.thanks_text {
+  font-size: 2.1vw;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.img01 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.img02 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }

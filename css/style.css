@@ -110,20 +110,6 @@ header {
   width: 45vw;
 }
 
-/* .portfolio_tree {
-  animation: portfolio_tree 2s infinite ease-in-out alternate-reverse;
-}
-
-@keyframes portfolio_tree {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(30px);
-  }
-} */
-
 .portfolio_tree {
   animation: portfolio_tree 1s ease-in-out infinite alternate-reverse;
 }
@@ -322,7 +308,7 @@ header {
   }
 
   .tree_img {
-    width: 68.5vw;
+    width: 72vw;
     margin-top: -1px;
     margin-left: -20px;
   }
@@ -1012,7 +998,7 @@ header {
 
 .works_btn {
   position: absolute;
-  top: 78%;
+  top: 80%;
   left: 36%;
   font-size: 22px;
   font-family: "a-otf-ryumin-pr6n", serif;

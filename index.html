@@ -260,35 +260,53 @@
                             <div class="swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="./images/works01.jpg" alt="works01">
+                                        <a href="works_content-01.html">
+                                            <img src="./images/works01.jpg" alt="works01">
+                                        </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./images/works03.jpg" alt="works03">
+                                        <a href="works_content-02.html">
+                                            <img src="./images/works02.jpg" alt="works02">
+                                        </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./images/works04.jpg" alt="works04">
+                                        <a href="works_content-03.html">
+                                            <img src="./images/works03.jpg" alt="works03">
+                                        </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./images/works02.jpg" alt="works02">
+                                        <a href="works_content-04.html">
+                                            <img src="./images/works04.jpg" alt="works04">
+                                        </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./images/works05.jpg" alt="works05">
+                                        <a href="works_content-05.html">
+                                            <img src="./images/works05.jpg" alt="works05">
+                                        </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./images/works06.jpg" alt="works06">
+                                        <a href="works_content-06.html">
+                                            <img src="./images/works06.jpg" alt="works06">
+                                        </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./images/works07.jpg" alt="works07">
+                                        <a href="works_content-07.html">
+                                            <img src="./images/works07.jpg" alt="works07">
+                                        </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./images/works08.jpg" alt="works08">
+                                        <a href="works_content-08.html">
+                                            <img src="./images/works08.jpg" alt="works08">
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="swiper-button-prev"></div>
                                 <div class="swiper-button-next"></div>
                             </div>
                             <div class="works_btn">
-                                view more...
+                                <a href="works_list.html">
+                                    view more...
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -452,6 +470,10 @@
                             <button type="submit">送信する</button>
                         </div>
                     </form>
+                    <form
+                        action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSe00eJN0CWayVTtmGW0ONrc6MT8bA5no3F9iHgbGwaOm18KRw/formResponse"
+                        method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
+                    </form>
                 </div>
             </div>
 
@@ -548,6 +570,9 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper(".swiper", {
+            // autoplay: {
+            //     delay: 3000,
+            // },
             speed: 600, // スライドの切り替えスピード
             loop: true, // ループさせる
             slidesPerView: 1.8, // スライドを複数枚表示する
@@ -560,6 +585,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
             },
         });
     </script>
+
 </body>
 
 </html>

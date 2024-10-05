@@ -69,6 +69,34 @@ header {
   height: 100vh;
 } */
 
+.portfolio_tree {
+  animation: portfolio_tree 1s ease-in-out infinite alternate-reverse;
+}
+.tree_img {
+  animation: tree_img 1.2s ease-in-out infinite alternate-reverse;
+}
+@keyframes portfolio_tree {
+  0% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+@keyframes tree_img {
+  0% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+.tree_img {
+  margin-top: -5px;
+  margin-left: -100px;
+}
+
 .portfolio_top02 {
   position: relative;
 }
@@ -211,6 +239,10 @@ header {
 @media screen and (max-width: 1100px) {
   .item {
     padding-left: 10px;
+  }
+
+  .works_title {
+    margin-top: 0;
   }
 }
 
