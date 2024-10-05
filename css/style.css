@@ -595,13 +595,41 @@ header {
   margin-right: 20px;
 }
 
-.top_scroll::after {
+.scroll_line {
+  width: 200px;
+  height: 3px;
+  background-color: #c67039;
+  margin-left: 35px;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 3px;
+    background-color: #ffffff;
+    margin-left: 35px;
+    animation: scrolldown 1.4s ease-in-out infinite;
+  }
+}
+
+@keyframes scrolldown {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* .top_scroll::after {
   content: "";
   width: 200px;
   height: 3px;
   background-color: #c67039;
   margin-left: 35px;
-}
+} */
 
 .sp_top_scroll {
   display: none;
