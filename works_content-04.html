@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>works_content-04</title>
     <link rel="stylesheet" href="./css/works_content-sp1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
     <header id="works_list_portfolio_top">
         <div class="portfolio_top01">
-            <picture class="portfolio_tree">
-                <img src="./images/pc_top_tree-100.png" alt="tree">
-            </picture>
+            <div class="portfolio_tree">
+                <img class="tree_img" src="./images/pc_top_tree-100.png" alt="tree">
+            </div>
             <div class="portfolio_title">
                 <h1 class="portfolio_title01">
                     OKAZAKI YUMIKO
@@ -24,38 +25,76 @@
             </div>
         </div>
 
-        <!-- <div class="portfolio_top02">
-            <ul class="nav_list">
-                <li class="nav_list_text">
-                    <a href="index.html#portfolio_top">
-                        home
-                    </a>
-                </li>
-                <li class="nav_list_text">
-                    <a href="index.html#service_contents">
-                        service
-                    </a>
-                </li>
-                <li class="nav_list_text">
-                    <a href="index.html#works_contents">
-                        works
-                    </a>
-                </li>
-                <li class="nav_list_text">
-                    <a href="index.html#about_contents">
-                        about
-                    </a>
-                </li>
-                <li class="nav_list_text">
-                    <a href="index.html#contact_contents">
-                        contact
-                    </a>
-                </li>
-                <li class="nav_icon">
-                    <img src="./images/instagram-100.png" alt="instagram">
-                </li>
-            </ul>
-        </div> -->
+        <div class="portfolio_top02">
+            <nav class="nav_list">
+                <ul>
+                    <li class="nav_list_text">
+                        <a href="index.html#portfolio_top">
+                            home
+                        </a>
+                    </li>
+                    <li class="nav_list_text">
+                        <a href="index.html#service_contents">
+                            service
+                        </a>
+                    </li>
+                    <li class="nav_list_text">
+                        <a href="index.html#works_contents">
+                            works
+                        </a>
+                    </li>
+                    <li class="nav_list_text">
+                        <a href="index.html#about_contents">
+                            about
+                        </a>
+                    </li>
+                    <li class="nav_list_text">
+                        <a href="index.html#contact_contents">
+                            contact
+                        </a>
+                    </li>
+                    <li class="nav_icon">
+                        <img src="./images/instagram-100.png" alt="instagram">
+                    </li>
+                </ul>
+            </nav>
+
+            <nav class="sp_nav_list">
+                <ul>
+                    <li class="nav_list_text">
+                        <a href="index.html#portfolio_top">
+                            home
+                        </a>
+                    </li>
+                    <li class="nav_list_text">
+                        <a href="index.html#service_contents">
+                            service
+                        </a>
+                    </li>
+                    <li class="nav_list_text">
+                        <a href="index.html#works_contents">
+                            works
+                        </a>
+                    </li>
+                    <li class="nav_list_text">
+                        <a href="index.html#about_contents">
+                            about
+                        </a>
+                    </li>
+                    <li class="nav_list_text">
+                        <a href="index.html#contact_contents">
+                            contact
+                        </a>
+                    </li>
+                    <li class="nav_icon">
+                        <img src="./images/instagram-100.png" alt="instagram">
+                    </li>
+                </ul>
+            </nav>
+            <div class="sp_btn">
+                <span></span>
+            </div>
+        </div>
     </header>
 
     <section class="works_title">
@@ -133,10 +172,19 @@
         <h2 class="copyright">
             <span class="mgr-20">©️ OKAZAKI YUMIKO</span>PORTFOLIO SITE
         </h2>
-        <picture class="bottom_img">
+        <div class="bottom_img">
             <img class="bottom_tree" src="./images/pc_woks_bottom.png" alt="tree">
-        </picture>
+        </div>
     </section>
+
+    <script>
+        $(function () {
+            $('.sp_btn').on("click", function () {
+                $('.sp_btn').toggleClass("open");
+                $('.sp_nav_list').fadeToggle();
+            })
+        })
+    </script>
 
 </body>
 
