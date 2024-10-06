@@ -178,6 +178,10 @@ header {
   .banner_img {
     width: 100%;
   }
+
+  .works_list-sub {
+    font-size: 18px;
+  }
 }
 
 .sp_btn,
@@ -187,7 +191,7 @@ header {
 @media screen and (max-width: 767px) {
   .tree_img {
     width: 68.5vw;
-    margin-top: -1px;
+    margin-top: -2px;
     margin-left: -20px;
   }
 
@@ -202,10 +206,10 @@ header {
 
   @keyframes tree_img {
     0% {
-      transform: translateY(-1px);
+      transform: translateY(-2px);
     }
     100% {
-      transform: translateY(1px);
+      transform: translateY(2px);
     }
   }
 
@@ -292,6 +296,13 @@ header {
       "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
     font-weight: bold;
   }
+
+  .nav_icon {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .works_wrapper01 {
@@ -355,10 +366,18 @@ header {
 @media screen and (max-width: 1100px) {
   .item {
     padding-left: 10px;
+    width: 150px;
+    /* padding-left: 12px; */
+    padding-right: 5%;
+    white-space: nowrap;
   }
 
   .works_title {
     margin-top: 0;
+  }
+
+  .works_title-main {
+    font-size: 63px;
   }
 
   .works_wrapper01 {
@@ -386,18 +405,11 @@ header {
 
   .works_box li {
     font-size: 20px;
-    padding-bottom: 9px;
+    padding-bottom: 15px;
   }
 
   .works_box li + li {
     padding-top: 23px;
-  }
-
-  .item {
-    width: 150px;
-    /* padding-left: 12px; */
-    padding-right: 5%;
-    white-space: nowrap;
   }
 
   .works_wrapper02 {
@@ -480,6 +492,7 @@ header {
   }
 
   .item {
+    width: 90px;
     padding-left: 10px;
     padding-right: 5%;
   }
