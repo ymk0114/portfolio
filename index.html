@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./jquery.inview-master/jquery.inview.min.js"></script>
 </head>
 
 <body>
@@ -46,7 +47,9 @@
                         </a>
                     </li>
                     <li class="nav_icon">
-                        <img src="./images/instagram-100.png" alt="instagram">
+                        <a href="https://www.instagram.com/imuy_34?igsh=b2JjZXhxcmtwaXhu&utm_source=qr">
+                            <img src="./images/instagram-100.png" alt="instagram">
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -79,7 +82,9 @@
                         </a>
                     </li>
                     <li class="nav_icon">
-                        <img src="./images/instagram-100.png" alt="instagram">
+                        <a href="https://www.instagram.com/imuy_34?igsh=b2JjZXhxcmtwaXhu&utm_source=qr">
+                            <img src="./images/instagram-100.png" alt="instagram">
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -127,6 +132,7 @@
                         </div>
                         <div class="sp_top_scroll">
                             <span class="mgr-20">scroll</span>down
+                            <div class="sp_scroll_line"></div>
                         </div>
                     </div>
                 </div>
@@ -235,10 +241,14 @@
                         </div>
                     </div>
                 </div>
-                <picture class="works_img">
-                    <source srcset="./images/sp_works-100.png" media="(max-width: 1100px)">
-                    <img src="./images/pc_works-100.png" alt="works_photo">
-                </picture>
+                <div class="works_img1">
+                    <div class="box js-fadeUp">
+                        <picture class="works_img">
+                            <source srcset="./images/sp_works-100.png" media="(max-width: 1100px)">
+                            <img src="./images/pc_works-100.png" alt="works_photo">
+                        </picture>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -406,35 +416,6 @@
                     </div>
                 </div>
                 <div class="customer-info">
-
-                    <!-- <div class="customer_info-form">
-                        <div class="customer_name">
-                            <div class="customer_name01">
-                                性
-                            </div>
-                            <div class="customer_name01">
-                                名
-                            </div>
-                        </div>
-                    </div>
-                    <div class="customer_info-form">
-                        会社名
-                        <div class="form-box">
-                        </div>
-                    </div>
-                    <div class="customer_info-form">
-                        メールアドレス
-                        <div class="form-box">
-                        </div>
-                    </div>
-                    <div class="customer_info-form">
-                        お問い合わせ内容
-                        <div class="form-box_contents">
-                        </div>
-                    </div>
-                    <div class="customer-info_form_btn">
-                        送信する
-                    </div> -->
                     <form
                         action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeERXSf-t-3XfI7QljaYylwZDVXWyuqm7Dw4Tr-Fl3aa2qBiw/formResponse"
                         method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
@@ -494,6 +475,7 @@
         </section>
 
     </main>
+
     <script>
         $(function () {
             $('.sp_btn').on("click", function () {
@@ -502,11 +484,14 @@
             })
         })
     </script>
+
     <script type="text/javascript">
         let submitted = false;
     </script>
     <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
-        onload="if(submitted){window.location='./thanks.html';}"></iframe>
+        onload="if(submitted){window.location='./thanks.html';}">
+    </iframe>
+
     <script src="
 https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
 "></script>
@@ -564,15 +549,22 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                 })
             })
         })()
-
+    </script>
+    <script>
+        // スクロールして表示領域に入ったらclass付与
+        $(function () {
+            $(".js-fadeUp").on("inview", function () {
+                $(this).addClass("is-inview");
+            });
+        });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper(".swiper", {
-            // autoplay: {
-            //     delay: 3000,
-            // },
+            autoplay: {
+                delay: 3000,
+            },
             speed: 600, // スライドの切り替えスピード
             loop: true, // ループさせる
             slidesPerView: 1.8, // スライドを複数枚表示する

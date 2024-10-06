@@ -318,6 +318,13 @@ header {
     display: block;
   }
 
+  .nav_icon {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .sp_btn {
     position: absolute;
     top: 8%;
