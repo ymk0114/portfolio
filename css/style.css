@@ -1347,7 +1347,7 @@ header {
     font-size: 5.3vw;
     margin-left: 0;
     text-align: center;
-    padding-left: 25px;
+    padding-left: 10vw;
   }
 
   .works_circle-img {
@@ -1594,7 +1594,7 @@ header {
     font-size: 5.3vw;
     margin-left: 0;
     text-align: center;
-    padding-left: 25px;
+    padding-left: 10vw;
   }
 
   .about_portrait img {
@@ -1835,8 +1835,8 @@ header {
     font-size: 5.3vw;
     margin-left: 0;
     text-align: center;
-    padding-left: 25px;
-    margin-bottom: 45px;
+    padding-left: 10vw;
+    margin-bottom: 80px;
   }
 
   #contact_contents .portfolio_menu .sp_menu_text {
