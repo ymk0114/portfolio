@@ -334,12 +334,6 @@
 
         <section data-scroll-section class="scroll_section about">
             <div id="about_contents">
-                <!-- <picture class="about_img01">
-                    <img src="./images/pc_about-100.png" alt="tree">
-                </picture>
-                <picture class="about_img02">
-                    <img src="./images/pc_about02-100.png" alt="石">
-                </picture> -->
                 <div class="portfolio_menu">
                     <div class="menu_title">
                         about
@@ -394,12 +388,14 @@
                 </picture> -->
                 <div class="contact_gradation">
                 </div>
-                <div class="portfolio_menu">
-                    <div class="menu_title">
-                        contact
-                    </div>
-                    <div class="menu_subtitle">
-                        お問い合わせ
+                <div class="contact_portfolio_menu">
+                    <div class="portfolio_menu">
+                        <div class="menu_title">
+                            contact
+                        </div>
+                        <div class="menu_subtitle">
+                            お問い合わせ
+                        </div>
                     </div>
                     <div class="menu_text">
                         ここまでお読みいただきありがとうございます。<br>
@@ -414,6 +410,8 @@
                         通常3日以内に返信させていただきます。
                     </div>
                 </div>
+
+
                 <div class="customer-info">
                     <form
                         action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeERXSf-t-3XfI7QljaYylwZDVXWyuqm7Dw4Tr-Fl3aa2qBiw/formResponse"
@@ -499,11 +497,12 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
             document.addEventListener('DOMContentLoaded', () => {
                 let scroll
                 function initScroll() {
+                    const isMobile = window.innerWidth <= 1024
                     const direction = window.innerWidth <= 1024 ? 'vertical' : 'horizontal';
                     scroll = new LocomotiveScroll({
                         el: document.querySelector('[data-scroll-container]'),
                         direction: direction,
-                        smooth: true,
+                        smooth: !isMobile,
                         tablet: {
                             direction: 'vertical',
                             smooth: false,
@@ -553,6 +552,15 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
         // スクロールして表示領域に入ったらclass付与
         $(function () {
             $(".js-fadeUp").on("inview", function () {
+                $(this).addClass("is-inview");
+            });
+        });
+    </script>
+
+    <script>
+        // スクロールして表示領域に入ったらclass付与
+        $(function () {
+            $(".portfolio_menu").on("inview", function () {
                 $(this).addClass("is-inview");
             });
         });
