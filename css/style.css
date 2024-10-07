@@ -761,6 +761,12 @@ header {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .sp_scroll_line {
+    height: 200px;
+  }
+}
+
 .portfolio_menu {
   opacity: 0; /* 最初は非表示 */
   transform: translateX(30px); /* 下に30pxの位置から */
@@ -1285,6 +1291,7 @@ header {
 
 .about_img-1 {
   display: flex;
+  overflow: hidden;
   animation: about_img-1 1s ease-in-out infinite alternate-reverse;
 }
 
@@ -1412,10 +1419,6 @@ header {
     100% {
       transform: translateY(10px);
     }
-  }
-
-  .about_img01 {
-    margin-left: 0;
   }
 
   .about_img01 img {
@@ -1940,11 +1943,13 @@ footer {
 .footer_img {
   position: relative;
   margin-left: -200px;
+  overflow: hidden;
   animation: footer_img 1s ease-in-out infinite alternate-reverse;
 }
 
 .footer_img01 {
   margin-right: -10px;
+  margin-bottom: -7px;
   animation: footer_img01 1.2s ease-in-out infinite alternate-reverse;
 }
 @keyframes footer_img {
