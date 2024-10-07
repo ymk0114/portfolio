@@ -2103,6 +2103,7 @@ textarea.c-form_input {
 
   footer {
     height: 100%;
+    overflow-x: hidden;
   }
 
   .footer_img {
