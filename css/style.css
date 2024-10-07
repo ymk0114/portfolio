@@ -2080,7 +2080,7 @@ textarea.c-form_input {
   }
 
   .footer_img01 {
-    margin-right: -10px;
+    /* margin-right: -10px; */
     animation: footer_img01 1.2s ease-in-out infinite alternate-reverse;
   }
   @keyframes footer_img {
@@ -2093,10 +2093,10 @@ textarea.c-form_input {
   }
   @keyframes footer_img01 {
     0% {
-      transform: translateY(-1px);
+      transform: translateY(1px);
     }
     100% {
-      transform: translateY(1px);
+      transform: translateY(0px);
     }
   }
 
