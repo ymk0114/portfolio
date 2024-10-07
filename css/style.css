@@ -1291,7 +1291,7 @@ header {
 
 .about_img-1 {
   display: flex;
-  overflow: hidden;
+  /* overflow: hidden; */
   animation: about_img-1 1s ease-in-out infinite alternate-reverse;
 }
 
@@ -1400,7 +1400,7 @@ header {
 
   .about_img01 {
     margin-left: -8px;
-    margin-bottom: -5px;
+    margin-bottom: -10px;
     animation: about_img01 1.2s ease-in-out infinite alternate-reverse;
   }
 
@@ -1498,10 +1498,6 @@ header {
     100% {
       transform: translateY(5px);
     }
-  }
-
-  .about_img01 {
-    margin-left: 0;
   }
 
   .about_img01 img {
@@ -2180,7 +2176,7 @@ textarea.c-form_input {
   }
 
   .footer_img01 {
-    margin-right: -10px;
+    margin-right: -5px;
     animation: footer_img01 1.2s ease-in-out infinite alternate-reverse;
   }
   @keyframes footer_img {
