@@ -64,7 +64,13 @@ header {
   justify-content: space-between;
 }
 
+.portfolio_top01 {
+  overflow: hidden;
+  margin-left: -10px;
+}
+
 .portfolio_tree {
+  overflow: hidden;
   animation: portfolio_tree 1s ease-in-out infinite alternate-reverse;
 }
 .tree_img {
@@ -517,6 +523,13 @@ header {
   justify-content: center;
   margin: 30px auto 0;
   font-size: 45px;
+  border: 1.5px solid #56402b;
+}
+
+.contact_btn:hover {
+  background: white;
+  color: #c67039;
+  background-color: white;
 }
 
 .contact_btn::after {
@@ -529,6 +542,11 @@ header {
   border-top: 2px solid #ffffff; /* くの字を山なりに見た時、左側の太さと色 */
   border-right: 2px solid #ffffff; /* くの字を山なりに見た時、右側の太さと色 */
   transform: rotate(45deg); /* くの字の向き */
+}
+
+.contact_btn:hover::after {
+  border-top: 1.5px solid #c67039;
+  border-right: 1.5px solid #c67039;
 }
 
 .pc_contact-back_btn {
@@ -579,6 +597,7 @@ header {
 }
 
 .bottom_img {
+  overflow: hidden;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -589,6 +608,7 @@ header {
 }
 
 .bottom_tree {
+  overflow: hidden;
   width: 117%;
   animation: bottom_tree 1.2s ease-in-out infinite alternate-reverse;
 }

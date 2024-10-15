@@ -69,7 +69,13 @@ header {
   /* height: 100vh; */
 }
 
+.portfolio_top01 {
+  overflow: hidden;
+  margin-left: -10px;
+}
+
 .portfolio_tree {
+  overflow: hidden;
   animation: portfolio_tree 1s ease-in-out infinite alternate-reverse;
 }
 .tree_img {
@@ -536,6 +542,13 @@ header {
   justify-content: center;
   margin: 30px auto 0;
   font-size: 45px;
+  border: 1.5px solid #56402b;
+}
+
+.contact_btn:hover {
+  background: white;
+  color: #c67039;
+  background-color: white;
 }
 
 .contact_btn a {
@@ -558,6 +571,11 @@ header {
   transform: rotate(45deg); /* くの字の向き */
 }
 
+.contact_btn:hover::after {
+  border-top: 1.5px solid #c67039;
+  border-right: 1.5px solid #c67039;
+}
+
 .copyright {
   font-size: 15px;
   font-family: "zen-kaku-gothic-new", sans-serif;
@@ -574,6 +592,7 @@ header {
 }
 
 .bottom_img {
+  overflow: hidden;
   position: absolute;
   bottom: -30px;
   right: 0;
@@ -584,6 +603,8 @@ header {
 }
 
 .bottom_tree {
+  overflow: hidden;
+  margin-bottom: -5px;
   width: 117%;
   animation: bottom_tree 1.2s ease-in-out infinite alternate-reverse;
 }
@@ -603,11 +624,6 @@ header {
   100% {
     transform: translateY(5px);
   }
-}
-
-.bottom_tree {
-  margin-bottom: -5px;
-  /* margin-right: -100px; */
 }
 
 @media screen and (max-width: 1100px) {
@@ -654,7 +670,7 @@ header {
     display: block;
     text-align: center;
     color: #56402b;
-    font-size: 3.9vw;
+    font-size: 14px;
     line-height: 1.7;
   }
 
