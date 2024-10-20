@@ -955,21 +955,8 @@ header {
 }
 
 @media screen and (max-width: 1100px) {
-  .service_img img {
+  .service {
     height: auto;
-    width: 100%;
-  }
-
-  .sp_portfolio_menu {
-    display: block;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  #service_contents .portfolio_menu {
-    display: none;
   }
 
   #service_contents {
@@ -978,15 +965,53 @@ header {
     height: auto;
   }
 
-  #service_contents .portfolio_menu .menu_title {
+  .service_img_box {
+    position: relative;
+    z-index: 200;
+  }
+
+  .service_img {
+    position: static;
+    height: auto;
+    width: 100%;
+  }
+
+  .service_img img {
+    width: 100%;
+    height: auto;
+  }
+
+  #service_contents .portfolio_menu {
+    display: none;
+  }
+
+  .sp_portfolio_menu {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+  }
+
+  .sp_portfolio_menu .menu_title {
     margin: 20% 0 40px;
-    font-size: 60px;
-    font-family: "a-otf-ryumin-pr6n", serif;
-    font-weight: 300;
-    font-style: normal;
+    font-size: 6.3vw;
+    font-family: "HiraMinProN-W6";
+    font-feature-settings: initial;
     padding-left: 20px;
     display: flex;
-    /* color: #ffffff; */
+    color: #c67039;
+  }
+
+  .sp_portfolio_menu .menu_title::before {
+    width: 10vw;
+    margin-right: 3%;
+  }
+
+  .sp_menu_subtitle {
+    text-align: center;
+    font-size: 5.3vw;
+    padding-left: 20px;
   }
 
   .service_gradation {
@@ -1013,6 +1038,10 @@ header {
     z-index: 300;
   }
 
+  .card + .card {
+    margin-top: 100px;
+  }
+
   .works_img1 {
     position: static;
     justify-content: flex-end;
@@ -1032,83 +1061,40 @@ header {
     transition-delay: 0.5s; /* フェード開始を0.5秒遅らせる */
   }
 
-  .service {
-    height: auto;
-  }
-
-  .service_img_box {
-    position: relative;
-    z-index: 200;
-  }
-
-  .sp_portfolio_menu {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .sp_portfolio_menu .menu_title {
-    font-size: 13.3vw;
-    padding-left: 0;
-    margin: 0;
-    margin-bottom: 12%;
-    color: #ffffff;
-  }
-
-  .sp_portfolio_menu .menu_title::before {
-    width: 10vw;
-    margin-right: 3%;
-  }
-
-  .sp_menu_subtitle {
-    text-align: center;
-    font-size: 5.3vw;
-  }
-
-  .service_img {
-    position: static;
-    height: auto;
-    width: 100%;
-  }
-
-  .service_img img {
-    width: 100%;
-  }
-
   .card {
     justify-content: center;
+    align-items: center;
     margin-left: 0;
+  }
+
+  .card-img div {
+    width: 208px;
+    height: 208px;
+  }
+
+  .card_wrapper {
+    width: 58vw;
+  }
+
+  .card-title {
+    font-size: 5vw;
+  }
+
+  .card-app {
+    font-size: 2.2vw;
+  }
+
+  .card-text {
+    font-size: 2.2vw;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* #service_contents {
-    height: 100%;
-  } */
-
-  .service {
-    height: auto;
-  }
-
-  .service_img_box {
-    position: relative;
-    z-index: 200;
-  }
-
-  .sp_portfolio_menu {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
   .sp_portfolio_menu .menu_title {
-    font-size: 13.3vw;
+    font-size: 8.7vw;
     padding-left: 0;
     margin: 0;
     margin-bottom: 12%;
-    color: #ffffff;
   }
 
   .sp_portfolio_menu .menu_title::before {
@@ -1353,12 +1339,12 @@ header {
 }
 
 @media screen and (max-width: 1100px) {
-  #works_contents {
-    flex-direction: column;
+  .works {
     height: auto;
   }
 
-  .works {
+  #works_contents {
+    flex-direction: column;
     height: auto;
   }
 
@@ -1367,7 +1353,6 @@ header {
   }
 
   #works_contents .portfolio_menu {
-    /* margin-left: 17%; */
     margin-right: 0;
     position: static;
     margin-left: 0;
@@ -1376,11 +1361,12 @@ header {
 
   #works_contents .portfolio_menu .menu_title {
     margin-top: 0px;
-    font-size: 13.3vw;
+    font-size: 6.3vw;
     padding-left: 0;
     margin: 0;
-    margin-bottom: 6%;
+    margin-bottom: 40px;
     justify-content: center;
+    letter-spacing: 0.05em;
   }
 
   #works_contents .portfolio_menu .menu_title::before {
@@ -1392,7 +1378,8 @@ header {
     font-size: 5.3vw;
     margin-left: 0;
     text-align: center;
-    padding-left: 10vw;
+    padding-left: auto;
+    margin-right: -3%;
   }
 
   .works_circle-img {
@@ -1464,7 +1451,7 @@ header {
   }
 
   #works_contents .portfolio_menu .menu_title {
-    font-size: 13.3vw;
+    font-size: 8.7vw;
     padding-left: 0;
     margin: 0;
     margin-bottom: 6%;
@@ -1615,11 +1602,12 @@ header {
   }
 
   #about_contents .portfolio_menu .menu_title {
-    font-size: 13.3vw;
+    font-size: 6.3vw;
     padding-left: 0;
     margin: 0;
-    margin-bottom: 6%;
+    margin-bottom: 40px;
     justify-content: center;
+    /* letter-spacing: 0.05em; */
   }
 
   #about_contents .portfolio_menu .menu_title::before {
@@ -1631,7 +1619,7 @@ header {
     font-size: 5.3vw;
     margin-left: 0;
     text-align: center;
-    padding-left: 10vw;
+    padding-left: 20px;
   }
 
   .about_portrait img {
@@ -1693,7 +1681,7 @@ header {
   }
 
   #about_contents .portfolio_menu .menu_title {
-    font-size: 13.3vw;
+    font-size: 8.7vw;
     padding-left: 0;
     margin: 0;
     margin-bottom: 6%;
@@ -1844,10 +1832,10 @@ header {
   }
 
   .contact_portfolio_menu .menu_title {
-    font-size: 13.3vw;
+    font-size: 6.3vw;
     padding-left: 0;
     margin: 0;
-    margin-bottom: 6%;
+    margin-bottom: 40px;
     justify-content: center;
   }
 
@@ -1860,7 +1848,7 @@ header {
     font-size: 5.3vw;
     margin-left: 0;
     text-align: center;
-    padding-left: 10vw;
+    padding-left: 20px;
     margin-bottom: 80px;
   }
 
@@ -1914,7 +1902,7 @@ header {
   }
 
   .contact_portfolio_menu .menu_title {
-    font-size: 13.3vw;
+    font-size: 8.7vw;
     padding-left: 0;
     margin: 0;
     margin-bottom: 6%;
