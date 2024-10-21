@@ -73,7 +73,7 @@ body {
 
 .service {
   /* width: 150vw; */
-  width: 1950px;
+  width: 2570px;
   height: 100vh;
 }
 
@@ -800,7 +800,7 @@ header {
   position: absolute;
   display: inline-block;
   height: 100%;
-  /* margin-left: -137px; */
+  margin-left: 95px;
   z-index: 100;
 }
 
@@ -816,7 +816,7 @@ header {
   position: absolute;
   left: 5%;
   /* z-index: -2; */
-  width: 1450px;
+  width: 2100px;
   height: 100%;
   background: linear-gradient(
     to right,
@@ -863,28 +863,30 @@ header {
 }
 
 .service_card {
-  width: 660px;
+  display: flex;
+  width: 90.4vw;
   margin: auto 0;
   z-index: 100;
 }
 
 .card {
   display: flex;
-  width: 100%;
+  flex-direction: column;
+  width: 380px;
   /* height: 100%; */
-  margin-left: 9%;
-  align-items: flex-start;
-  color: #ffffff;
+  /* margin-left: 9%; */
+  align-items: center;
+  color: #56402b;
   white-space: nowrap;
 }
 
 .card + .card {
-  margin-top: 52px;
+  margin-left: 70px;
 }
 
 .card-img div {
-  width: 180px;
-  height: 180px;
+  width: 256px;
+  height: 256px;
   border-radius: 50%;
   background: #ffffff;
   filter: blur(5px);
@@ -896,26 +898,31 @@ header {
 
 .card-img img {
   position: absolute;
+  width: 102px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .card_wrapper {
-  align-content: space-around;
+  align-content: center;
   width: 368px;
-  margin-left: 4%;
+  font-family: "HiraMinProN-W6";
+  font-feature-settings: initial;
+  /* margin-left: 4%; */
 }
 
 .card_box {
   display: flex;
-  align-items: flex-end;
-  margin: 10px 0 35px;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0 73px;
 }
 
 .card-title {
   font-size: 30px;
-  margin-right: 25px;
+  margin-bottom: 60px;
+  /* margin-right: 25px; */
 }
 
 .card-app {
@@ -923,14 +930,17 @@ header {
 }
 
 .card-text {
+  text-align: center;
   font-size: 18px;
+  font-family: "HiraMinProN-W6";
+  /* font-feature-settings: initial; */
   line-height: 2;
-  color: #ffffff;
+  color: #56402b;
 }
 
 .works_img1 {
   position: absolute;
-  left: 1400px;
+  left: 2050px;
   display: flex;
   align-items: flex-end;
   height: 100%;
@@ -974,6 +984,7 @@ header {
     position: static;
     height: auto;
     width: 100%;
+    margin-left: 0;
   }
 
   .service_img img {
@@ -1033,6 +1044,7 @@ header {
   }
 
   .service_card {
+    flex-direction: column;
     width: 100%;
     margin: -30% auto 0;
     z-index: 300;
@@ -1040,6 +1052,7 @@ header {
 
   .card + .card {
     margin-top: 100px;
+    margin-left: 0;
   }
 
   .works_img1 {
@@ -1062,9 +1075,11 @@ header {
   }
 
   .card {
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-left: 0;
+    width: 100%;
   }
 
   .card-img div {
@@ -1072,12 +1087,25 @@ header {
     height: 208px;
   }
 
+  .card-img img {
+    width: auto;
+  }
+
   .card_wrapper {
     width: 58vw;
+    margin-left: 4%;
+  }
+
+  .card_box {
+    flex-direction: row;
+    align-items: flex-end;
+    margin-bottom: 45px;
   }
 
   .card-title {
-    font-size: 5vw;
+    font-size: 4vw;
+    margin-bottom: auto;
+    padding-right: 15px;
   }
 
   .card-app {
@@ -1086,6 +1114,7 @@ header {
 
   .card-text {
     font-size: 2.2vw;
+    text-align: left;
   }
 }
 
@@ -1165,6 +1194,7 @@ header {
 
   .card-text {
     font-size: 4vw;
+    text-align: center;
   }
 
   /* フェードイン(初期値) */
@@ -1549,9 +1579,8 @@ header {
 .name {
   display: flex;
   align-items: flex-end;
-  font-family: "a-otf-ryumin-pr6n", serif;
-  font-weight: 300;
-  font-style: normal;
+  font-family: "HiraMinProN-W6";
+  font-feature-settings: initial;
   margin-bottom: 65px;
   white-space: nowrap;
 }
@@ -1568,6 +1597,8 @@ header {
 .profile_text {
   font-size: 14px;
   line-height: 1.78;
+  font-family: "HiraMinProN-W6";
+  font-feature-settings: initial;
 }
 
 .contact_img {
@@ -1751,13 +1782,17 @@ header {
 .contact_portfolio_menu .menu_text {
   font-size: 16px;
   color: #56402b;
+  font-family: "HiraMinProN-W6";
+  font-feature-settings: initial;
   line-height: 2.25;
-  margin-left: 35%;
+  margin-left: 28%;
   margin-top: 15%;
   white-space: nowrap;
 }
 
 .customer-info {
+  font-family: "HiraMinProN-W6";
+  font-feature-settings: initial;
   font-size: 16px;
   color: #56402b;
   width: 640px;
@@ -1855,6 +1890,8 @@ header {
   .contact_portfolio_menu .sp_menu_text {
     display: block;
     margin-left: 0;
+    font-family: "HiraMinProN-W6";
+    /* font-feature-settings: initial; */
     font-size: 2.7vw;
     width: 60%;
     margin: auto;
@@ -2052,6 +2089,10 @@ textarea.c-form_input {
   .customer-info {
     margin-left: 0;
     width: 100%;
+    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+      "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+      "ＭＳ 明朝", serif;
+    font-feature-settings: "palt";
   }
 
   .c-form {
