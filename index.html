@@ -668,7 +668,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
     <script>
         // スクロールして表示領域に入ったらclass付与
         $(function () {
-            $(".portfolio_menu").on("inview", function () {
+            $(".portfolio_menu,.pc_portfolio_menu,.sp_portfolio_menu,#introduction_contents .sp_portfolio_menu").on("inview", function () {
                 $(this).addClass("is-inview");
             });
         });

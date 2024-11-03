@@ -771,17 +771,23 @@ header {
   }
 }
 
-.portfolio_menu {
+.portfolio_menu,
+.pc_portfolio_menu,
+.sp_portfolio_menu {
   opacity: 0; /* 最初は非表示 */
-  transform: translateX(30px); /* 下に30pxの位置から */
+  transform: translateX(30px); /* 右に30pxの位置から */
   transition: opacity 0.8s, transform 1s; /* 透過率と縦方向の移動を0.8秒 */
 }
 
-.portfolio_menu.is-inview {
+.portfolio_menu.is-inview,
+.pc_portfolio_menu.is-inview,
+.sp_portfolio_menu.is-inview {
   opacity: 1; /* 表示領域に入ったら表示 */
-  transform: translateX(0); /* 30px上に移動する */
+  transform: translateX(0); /* 30px左に移動する */
   transition-delay: 0.5s; /* フェード開始を0.5秒遅らせる */
 }
+
+/* introduction section */
 
 #introduction_contents {
   position: relative;
@@ -790,7 +796,7 @@ header {
 }
 
 .introduction_img {
-  margin-left: 102px;
+  margin-left: 100px;
   height: 100%;
 }
 
@@ -861,10 +867,11 @@ header {
     display: flex;
     flex-direction: column;
     transform: none;
-    margin-bottom: 40px;
+    margin-bottom: 130px;
   }
 
   #introduction_contents {
+    position: static;
     flex-direction: column;
   }
 
@@ -880,21 +887,30 @@ header {
     margin-bottom: 52px;
   }
 
+  .introduction_img01 img {
+    width: 45vw;
+  }
+
   #introduction_contents .sp_portfolio_menu .menu_title {
-    text-align: center;
+    display: flex;
     justify-content: center;
-    margin-bottom: 6%;
+    margin-bottom: 40px;
   }
 
   #introduction_contents .sp_portfolio_menu .menu_title::before {
     margin-right: 0;
     display: inline-block;
+    width: 10vw;
+    margin-right: 3%;
   }
 
   #introduction_contents .sp_portfolio_menu .menu_subtitle {
     margin-left: 0;
     font-size: 5.3vw;
     text-align: center;
+    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+      "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+      "ＭＳ 明朝", serif;
   }
 
   .sp_introduction-text {
@@ -906,10 +922,11 @@ header {
     display: flex;
     justify-content: center;
     gap: 15px;
+    margin-bottom: 60px;
   }
 
   .sp_main-text {
-    font-size: 5.3vw;
+    font-size: 4.5vw;
     line-height: 1.8;
     color: #56402b;
     white-space: nowrap;
@@ -920,7 +937,7 @@ header {
   }
 
   .sp_sub-text {
-    font-size: 4vw;
+    font-size: 3vw;
     line-height: 1.8;
     color: #56402b;
     white-space: nowrap;
@@ -935,9 +952,33 @@ header {
   }
 
   .sp_introduction-img02 img {
+    width: 25vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #introduction_contents .sp_portfolio_menu {
+    margin-bottom: 40px;
+  }
+
+  .sp_introduction-text_box {
+    margin-bottom: 0;
+  }
+
+  .sp_main-text {
+    font-size: 5.3vw;
+  }
+
+  .sp_sub-text {
+    font-size: 4vw;
+  }
+
+  .sp_introduction-img02 img {
     width: 30vw;
   }
 }
+
+/* service section */
 
 #service_contents {
   position: relative;
@@ -1151,9 +1192,9 @@ header {
 
   .sp_portfolio_menu {
     position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 25%;
+    /* transform: translate(-50%, -50%); */
     display: block;
   }
 
@@ -1212,19 +1253,6 @@ header {
     position: static;
     justify-content: flex-end;
     height: auto;
-  }
-
-  /* フェードイン(初期値) */
-  .js-fadeUp {
-    opacity: 0; /* 最初は非表示 */
-    transform: translateX(30px); /* 下に30pxの位置から */
-    transition: opacity 0.8s, transform 0.8s; /* 透過率と縦方向の移動を0.8秒 */
-  }
-  /* フェードイン(スクロールした後) */
-  .js-fadeUp.is-inview {
-    opacity: 1; /* 表示領域に入ったら表示 */
-    transform: translateX(0); /* 30px上に移動する */
-    transition-delay: 0.5s; /* フェード開始を0.5秒遅らせる */
   }
 
   .card {
@@ -1307,7 +1335,7 @@ header {
 
   .service_card {
     /* width: 100%; */
-    margin: -40% auto 0;
+    margin: -35% auto;
     z-index: 300;
   }
 
@@ -1372,6 +1400,8 @@ header {
     width: 67%;
   }
 }
+
+/* works section */
 
 #works_contents {
   display: flex;
@@ -1563,6 +1593,9 @@ header {
     text-align: center;
     padding-left: auto;
     margin-right: -3%;
+    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+      "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+      "ＭＳ 明朝", serif;
   }
 
   .works_circle-img {
@@ -1710,6 +1743,8 @@ header {
 } */
 }
 
+/* about section */
+
 #about_contents {
   position: relative;
   display: flex;
@@ -1804,6 +1839,9 @@ header {
     margin-left: 0;
     text-align: center;
     padding-left: 20px;
+    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+      "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+      "ＭＳ 明朝", serif;
   }
 
   .about_portrait img {
@@ -1911,6 +1949,8 @@ header {
     font-size: 3.7vw;
   }
 }
+
+/* contact section */
 
 .contact_gradation {
   position: absolute;
@@ -2038,6 +2078,9 @@ header {
     text-align: center;
     padding-left: 20px;
     margin-bottom: 80px;
+    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+      "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+      "ＭＳ 明朝", serif;
   }
 
   .contact_portfolio_menu .sp_menu_text {
