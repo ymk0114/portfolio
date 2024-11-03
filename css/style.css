@@ -851,7 +851,8 @@ header {
   left: 100px;
 }
 
-#introduction_contents .sp_portfolio_menu,
+/* #introduction_contents .sp_portfolio_menu, */
+.sp_portfolio_menu,
 .sp_introduction-text {
   display: none;
 }
@@ -866,7 +867,7 @@ header {
     position: static;
     display: flex;
     flex-direction: column;
-    transform: none;
+    /* transform: none; */
     margin-bottom: 130px;
   }
 
