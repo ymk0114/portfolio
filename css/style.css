@@ -824,7 +824,9 @@ header {
   line-height: 2;
   color: #56402b;
   white-space: nowrap;
-  font-family: "HiraMinProN-W6";
+  font-family: "HiraMinProN-W6", "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+    "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+    "ＭＳ 明朝", serif;
   font-feature-settings: initial;
 }
 
