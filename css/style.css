@@ -21,9 +21,13 @@ li {
   color: #c67039;
   /* font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", */
   /* "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; */
-  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+  /* font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
     "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
-    "ＭＳ 明朝", serif;
+    "ＭＳ 明朝", serif; */
+  font-family: fot-tsukuaoldmin-pr6n, YuMincho, 游明朝, Times New Roman,
+    Hiragino Mincho ProN, HGS明朝B, ＭＳ Ｐ明朝, serif;
+  font-weight: 400;
+  font-style: normal;
   font-feature-settings: "palt";
 }
 
@@ -823,7 +827,7 @@ header {
   line-height: 2;
   color: #56402b;
   white-space: nowrap;
-  font-family: "HiraMinProN-W6";
+  /* font-family: "HiraMinProN-W6"; */
   font-feature-settings: initial;
 }
 
@@ -835,7 +839,7 @@ header {
   line-height: 2;
   color: #56402b;
   white-space: nowrap;
-  font-family: "HiraMinProN-W6";
+  /* font-family: "HiraMinProN-W6"; */
   font-feature-settings: initial;
 }
 
