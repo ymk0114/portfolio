@@ -827,7 +827,7 @@ header {
   line-height: 2;
   color: #56402b;
   white-space: nowrap;
-  /* font-family: "HiraMinProN-W6"; */
+  font-family: "HiraMinProN-W6";
   font-feature-settings: initial;
 }
 
@@ -839,7 +839,7 @@ header {
   line-height: 2;
   color: #56402b;
   white-space: nowrap;
-  /* font-family: "HiraMinProN-W6"; */
+  font-family: "HiraMinProN-W6";
   font-feature-settings: initial;
 }
 
